@@ -65,7 +65,7 @@ The Caregiver App is designed to streamline medication management. Caregivers ca
 - **Backend:** Python, FastAPI
 - **Database:** SQLite with SQLAlchemy ORM
 - **Migrations:** Alembic
-- **APIs:** OpenAI API, Twilio API, Azure for Students API
+- **APIs:** OpenAI API, Twilio API
 
 
 
