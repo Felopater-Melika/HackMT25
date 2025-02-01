@@ -32,13 +32,15 @@ def make_call():
     
     print("Placing call")
     
+    conversation.clear()
+    
     conversation.append({"role": "system", "content": "You are checking in on an elderly patient. Their name is " + patient_first_name + ". Ask to make sure they are feeling healthy and well, and ask whether they've taken their medications today. Keep your answers reasonably short."})
     
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url="https://883b-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
-        status_callback="https://883b-161-45-254-242.ngrok-free.app/call_ended"
+        url="https://9d73-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
+        status_callback="https://9d73-161-45-254-242.ngrok-free.app/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
 
@@ -62,7 +64,9 @@ def answer_call():
     response.gather(
         input="speech",
         action="/process_speech",
-        timeout=2
+        timeout=1,
+        speech_timeout="auto",
+        barge_in=True
     )
 
     return str(response)
@@ -126,4 +130,4 @@ def callEnded():
     return "Summary completed"
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5050)
