@@ -6,6 +6,7 @@ import os
 from twilio.rest import Client
 from twilio.twiml.voice_response import VoiceResponse
 import openai
+from pydantic import BaseModel
 
 
 load_dotenv()
@@ -35,14 +36,20 @@ def make_call():
     
     logger.info("Placing call")
     
-    conversation.clear()
+    prompt = f"""
+    You are checking in on an elderly patient.
+    Their name is {patient_first_name}. Ask to make sure they are feeling healthy and well, 
+    and ask whether they've taken their medications today. Keep your answers reasonably short.
+    Remind them if they have a serious concern, they should call their doctor or 911 for emergencies.
+    Do not offer to call emergency services for them.
+    """
     
-    conversation.append({"role": "system", "content": "You are checking in on an elderly patient. Their name is " + patient_first_name + ". Ask to make sure they are feeling healthy and well, and ask whether they've taken their medications today. Keep your answers reasonably short."})
+    conversation.append({"role": "system", "content": prompt})
     
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url=f"{NGROK_URL}/answer", # must be updated whenever ngrok is launched
+        url=f"{NGROK_URL}/answer",
         status_callback=f"{NGROK_URL}/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
@@ -119,17 +126,39 @@ async def process_speech(request: Request):
 
     return Response(content=str(response), media_type="application/xml")
 
+class call_log(BaseModel):
+    summary: str
+    follow_up_topics: list[str]
+    is_emergency: bool
+    
 @router.api_route("/call_ended", methods=["GET", "POST"])
 def call_ended():
     # Once the call ends, prompt ChatGPT to generate a short summary of the call for the 'response' key of the db
     logger.info("Call ended")
     if len(conversation) > 1:
-        conversation.append({"role": "user", "content": "Write a brief summary of that conversation"})
-        chatgpt_response = openai_client.chat.completions.create(
+        
+        prompt = f"""
+        Please briefly summarize the following conversation between a medical assistant and an elderly patient,
+        and provide a short list of follow-up keyword topics that the medical assistant should discuss with the patient
+        in their next phone call. If the patient has an emergency concern (extreme pain, suicide, refusal to take medicine,
+        falls, heart attack, etc.), please note that as true/false and the primary healthcare provider will be contacted immediately.
+        Conversation:
+        {conversation}
+        """
+        
+        response = openai_client.beta.chat.completions.parse(
             model="gpt-4o",
-            messages=conversation
+            messages=[{"role": "user", "content": prompt}],
+            response_format=call_log
         )
         
-        logger.info("Call summary: " + chatgpt_response.choices[0].message.content)
+        output = response.choices[0].message.parsed
+
+        
+        logger.info("Call summary: " + output.summary)
+        logger.info("Follow-up topics: " + str(output.follow_up_topics))
+        logger.info("Is emergency: " + str(output.is_emergency))
+        
+        conversation.clear()
     
     return "Summary completed"
