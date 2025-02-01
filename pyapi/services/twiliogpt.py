@@ -21,6 +21,8 @@ openai_client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 # array to store messages
 conversation = []
 
+follow_up_topics = []
+
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
@@ -43,9 +45,16 @@ def make_call():
     You are checking in on an elderly patient.
     Their name is {patient_first_name}. Ask to make sure they are feeling healthy and well, 
     and ask whether they've taken their medications today. Keep your answers reasonably short.
-    Remind them if they have a serious concern, they should call their doctor or 911 for emergencies.
+    If at any point it seems like they have a serious concern, 
+    remimd them they should call their doctor or 911 (nine-one-one) for emergencies.
     Do not offer to call emergency services for them.
     """
+    
+    if follow_up_topics:
+        prompt += f"""
+        Here is a list of follow up topics from the previous phone call (if available).
+        Spend some time discussing these briefly to be more personable:
+        {follow_up_topics}"""
     
     conversation.append({"role": "system", "content": prompt})
     
@@ -84,6 +93,9 @@ def answer_call():
     print(str(response))
     return Response(content=str(response), media_type="application/xml")
 
+class HangUp(BaseModel):
+    hang_up: bool
+
 @router.post("/process_speech")
 async def process_speech(request: Request):
     logger.info("Processing user input")
@@ -94,16 +106,43 @@ async def process_speech(request: Request):
     speech_result = form_date.get("SpeechResult")
 
     logger.warning("Speech Result: " + speech_result)
-
-    # if "hang up" is included in the speech_result, exit the function/end the call
-    if "hang up" in speech_result:
-        logger.info("User requested to hang up")
-        response.say("Goodbye")
-        return
-
+    
     # add user response and logger.info response, as to keep a log of the conversation
     logger.info("User Input:", speech_result)
     conversation.append({"role": "user", "content": speech_result})
+    
+    import time
+    start_time = time.time()
+    
+    is_hang_up = False
+    
+    try:
+
+        prompt = f"""
+        Based on the following conversation, determine if the user explicitly requests
+        to end the call and if it is appropriate to hang up here. Return 'true' or 'false' only.
+        Conversation: 
+        {conversation}
+        """
+        gpt_response = openai_client.beta.chat.completions.parse(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": prompt}],
+            response_format=HangUp
+        )
+        is_hang_up = gpt_response.choices[0].message.parsed.hang_up
+        
+        print("GPT response took " + str(time.time() - start_time) + " seconds")
+    except Exception as e:   
+        print(e)
+        is_hang_up = False
+
+    # if "hang up" is included in the speech_result, exit the function/end the call
+    if is_hang_up:
+        logger.info("User requested to hang up")
+        response.say("Goodbye")
+        response.hangup()
+        # route to call_ended
+        response.redirect("/call_ended")
 
     try:
         # generate next response from OpenAI
@@ -129,7 +168,7 @@ async def process_speech(request: Request):
 
     return Response(content=str(response), media_type="application/xml")
 
-class call_log(BaseModel):
+class CallLog(BaseModel):
     summary: str
     follow_up_topics: list[str]
     is_emergency: bool
@@ -152,7 +191,7 @@ def call_ended():
         response = openai_client.beta.chat.completions.parse(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
-            response_format=call_log
+            response_format=CallLog
         )
         
         output = response.choices[0].message.parsed
