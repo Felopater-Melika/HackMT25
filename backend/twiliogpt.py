@@ -1,14 +1,10 @@
 #twiliogpt.py
-# test with python twiliogpt.py '{ \"id\": 0, \"caregiver_id\": 0, \"first_name\": \"Noah\", \"last_name\": \"Cagle\", \"date_of_birth\": \"02/19/02\", \"contact_info\": \"+16156840156\", \"created_at\": \"nothing\", \"updated_at\": \"nothing\" }'
-
 from dotenv import load_dotenv
 import os
 from flask import Flask, request
 from twilio.rest import Client
 from twilio.twiml.voice_response import VoiceResponse
 import openai
-import sys
-import json
 
 app = Flask(__name__)
 
@@ -23,80 +19,33 @@ conversation = []
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 TWILIO_PHONE_NUMBER = "+18445485842"
-RECEIVING_NUMBER = "+16156840156"
 
-patient_id = ""
-caregiver_id = ""
-patient_first_name = ""
-patient_last_name = ""
-patient_date_of_birth = ""
-patient_contact_info = ""
-patient_created_at = ""
-patient_updated_at = ""
+# hardcoded test data
+patient_contact_info = "+16156840156"
+patient_first_name = "Noah"
 
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
-
-# this function should parse the json and assign its values to variables, but it doesn't seem to do so
-def load_params():
-    patientJsonParam = sys.argv[1]
-    
-    patientJsonDict = json.loads(patientJsonParam)
-    
-    patient_id = patientJsonDict["id"]
-    caregiver_id = patientJsonDict["caregiver_id"]
-    patient_first_name = patientJsonDict["first_name"]
-    patient_last_name = patientJsonDict["last_name"]
-    patient_date_of_birth = patientJsonDict["date_of_birth"]
-    patient_contact_info = patientJsonDict["contact_info"]
-    patient_created_at = patientJsonDict["created_at"]
-    patient_updated_at = patientJsonDict["updated_at"]
 
 @app.route("/make_call", methods=["GET"])
 def make_call():
     
     print("Placing call")
     
-    # reinit params because the load_params function doesnt work :(
-    patientJsonParam = sys.argv[1]
-    
-    patientJsonDict = json.loads(patientJsonParam)
-    
-    patient_id = patientJsonDict["id"]
-    caregiver_id = patientJsonDict["caregiver_id"]
-    patient_first_name = patientJsonDict["first_name"]
-    patient_last_name = patientJsonDict["last_name"]
-    patient_date_of_birth = patientJsonDict["date_of_birth"]
-    patient_contact_info = patientJsonDict["contact_info"]
-    patient_created_at = patientJsonDict["created_at"]
-    patient_updated_at = patientJsonDict["updated_at"]
-    
-    conversation.append({"role": "system", "content": "You are checking in on an elderly patient. Their name is " + str(patient_first_name) + ". Ask to make sure they are feeling healthy and well, and ask whether they've taken their medications today. Keep your answers reasonably short."})
+    conversation.append({"role": "system", "content": "You are checking in on an elderly patient. Their name is " + patient_first_name + ". Ask to make sure they are feeling healthy and well, and ask whether they've taken their medications today. Keep your answers reasonably short."})
     
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url="https://2a9e-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
-        status_callback="https://2a9e-161-45-254-242.ngrok-free.app/call_ended"
+        url="https://883b-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
+        status_callback="https://883b-161-45-254-242.ngrok-free.app/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
 
 @app.route("/answer", methods=["POST"])
 def answer_call():
     
-    # reinit params because the load_params function doesnt work :(
-    patientJsonParam = sys.argv[1]
-    
-    patientJsonDict = json.loads(patientJsonParam)
-    
-    patient_id = patientJsonDict["id"]
-    caregiver_id = patientJsonDict["caregiver_id"]
-    patient_first_name = patientJsonDict["first_name"]
-    patient_last_name = patientJsonDict["last_name"]
-    patient_date_of_birth = patientJsonDict["date_of_birth"]
-    patient_contact_info = patientJsonDict["contact_info"]
-    patient_created_at = patientJsonDict["created_at"]
-    patient_updated_at = patientJsonDict["updated_at"]
+    print("answer")
     
     response = VoiceResponse()
     
@@ -113,7 +62,7 @@ def answer_call():
     response.gather(
         input="speech",
         action="/process_speech",
-        timeout=5
+        timeout=2
     )
 
     return str(response)
@@ -173,8 +122,6 @@ def callEnded():
         )
         
         print("Call summary: " + chatgpt_response.choices[0].message.content)
-    else:
-        print("User hung-up immediately or didn't pick up")
     
     return "Summary completed"
 
