@@ -56,7 +56,7 @@ def load_params():
 def make_call():
     
     print("Placing call")
-    
+
     # reinit params because the load_params function doesnt work :(
     patientJsonParam = sys.argv[1]
     
@@ -76,7 +76,7 @@ def make_call():
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url="https://2a9e-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
+        url="https://2a9e-161-45-254-242.ngrok-free.app/answer",  # must be updated whenever ngrok is launched
         status_callback="https://2a9e-161-45-254-242.ngrok-free.app/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
