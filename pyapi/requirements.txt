@@ -9,3 +9,4 @@ azure-cognitiveservices-speech==1.42.0
 twilio==9.4.4
 openai==1.61.0
 python-dotenv==1.0.1
+passlib==1.7.4
