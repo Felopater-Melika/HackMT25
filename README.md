@@ -27,3 +27,54 @@ You can check out the [create-t3-app GitHub repository](https://github.com/t3-os
 ## How do I deploy this?
 
 Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+
+
+
+
+# Caregiver App
+
+A simple caregiver application that allows caregivers to log in, create patient profiles, manage medications with dosage and schedules, and integrates with Twilio to call patients and confirm that medications have been taken.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Setup Instructions](#setup-instructions)
+- [Usage](#usage)
+- [API Endpoints](#api-endpoints)
+- [License](#license)
+
+## Overview
+
+The Caregiver App is designed to streamline medication management. Caregivers can register or log in, create patient profiles, add medications, set dosage instructions, and schedule medication times. The app uses Twilio for automated call integration to confirm if the patient has taken their medication. The backend is built with FastAPI and Python, and uses SQLite as the database, managed with SQLAlchemy and Alembic for migrations.
+
+## Features
+
+- **User Authentication:** Caregivers can securely log in and manage their accounts.
+- **Patient Management:** Create and manage patient profiles.
+- **Medication Management:** Add medications with dosage and instructions.
+- **Scheduling:** Schedule medication times.
+- **Automated Calls:** Integrated with Twilio to call patients and verify medication intake.
+- **Clean & Simple Design:** Focus on essential features with the option to add more later.
+
+## Tech Stack
+
+- **Frontend:** React, Next.js (T3.gg)
+- **Backend:** Python, FastAPI
+- **Database:** SQLite with SQLAlchemy ORM
+- **Migrations:** Alembic
+- **APIs:** OpenAI API, Twilio API
+
+
+
+
+### Prerequisites
+
+- **Python 3.x** installed on your system.
+- **Node.js** (if working on or testing the frontend).
+- (Optional) A virtual environment tool like `venv` or `virtualenv`.
+
+
+
