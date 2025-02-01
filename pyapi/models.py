@@ -13,7 +13,7 @@ from passlib.hash import bcrypt  # For password hashing
 # Database setup
 Base = declarative_base()
 engine = create_engine(
-    'sqlite:///sql.db',
+    "sqlite:///sql.db",
     connect_args={"check_same_thread": False},
     echo=True  # Optional: shows SQL logging
 )
@@ -146,17 +146,6 @@ class CallLog(Base):
     # Relationships
     medication_schedule = relationship("MedicationSchedule", back_populates="call_logs")
     patient = relationship("Patient", back_populates="call_logs")
-
-# Caregiver model
-class Caregiver(Base):
-    __tablename__ = 'caregivers'
-    
-    id = Column(Integer, primary_key=True)
-    username = Column(String(255), unique=True, nullable=False)
-    hashed_password = Column(String(255), nullable=False)
-    email = Column(String(255), unique=True, nullable=False)
-    created_at = Column(DateTime, default=datetime.datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
 # Create the tables
 #Base.metadata.create_all(engine)
