@@ -61,11 +61,11 @@ The Caregiver App is designed to streamline medication management. Caregivers ca
 
 ## Tech Stack
 
-- **Frontend:** React, Next.js (T3.gg)
+- **Frontend:** React, Next.js, ShadcnUI (Figma)
 - **Backend:** Python, FastAPI
 - **Database:** SQLite with SQLAlchemy ORM
 - **Migrations:** Alembic
-- **APIs:** OpenAI API, Twilio API
+- **APIs:** OpenAI API, Twilio API, Azure for Students API
 
 
 
