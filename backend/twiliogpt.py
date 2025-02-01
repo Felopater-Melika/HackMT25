@@ -76,7 +76,8 @@ def make_call():
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url="https://2a9e-161-45-254-242.ngrok-free.app/answer" # must be updated whenever ngrok is launched
+        url="https://2a9e-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
+        status_callback="https://2a9e-161-45-254-242.ngrok-free.app/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
 
@@ -137,6 +138,7 @@ def process_speech():
     conversation.append({"role": "user", "content": speech_result})
 
     try:
+        # generate next response from OpenAI
         chatgpt_response = openai_client.chat.completions.create(
             model="gpt-4o",
             messages=conversation
@@ -152,12 +154,29 @@ def process_speech():
 
     except Exception as e:
         print("OpenAI API Error:", e)
-        response.say("Sorry, I am having trouble responding right now.")
+        response.say("Sorry, I have experienced a software issue.")
     
     # return to the answer_call function, which will continue the conversation
     response.redirect("/answer")
 
     return str(response)
+
+@app.route("/call_ended", methods=["GET", "POST"])
+def callEnded():
+    # Once the call ends, prompt ChatGPT to generate a short summary of the call for the 'response' key of the db
+    print("Call ended")
+    if len(conversation) > 1:
+        conversation.append({"role": "user", "content": "Write a brief summary of that conversation"})
+        chatgpt_response = openai_client.chat.completions.create(
+            model="gpt-4o",
+            messages=conversation
+        )
+        
+        print("Call summary: " + chatgpt_response.choices[0].message.content)
+    else:
+        print("User hung-up immediately or didn't pick up")
+    
+    return "Summary completed"
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
