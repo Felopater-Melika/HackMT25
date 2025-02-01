@@ -1,4 +1,5 @@
 #twiliogpt.py
+from fastapi import APIRouter, Form, Request
 from dotenv import load_dotenv
 import os
 from twilio.rest import Client
@@ -8,6 +9,7 @@ import openai
 
 load_dotenv()
 
+router = APIRouter()
 # init gpt client
 openai_client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
@@ -25,7 +27,7 @@ patient_first_name = "Noah"
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-@app.route("/make_call", methods=["GET"])
+@router.get("/make_call")
 def make_call():
     
     print("Placing call")
@@ -42,13 +44,13 @@ def make_call():
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
 
-@app.route("/answer", methods=["POST"])
+@router.post("/answer")
 def answer_call():
-    
+
     print("answer")
-    
+
     response = VoiceResponse()
-    
+
     conv_len = len(conversation)
     
     print("Answering call or responding")
@@ -69,15 +71,15 @@ def answer_call():
 
     return str(response)
 
-@app.route("/process_speech", methods=["POST"])
+@router.post("/process_speech")
 def process_speech():
     
     print("Processing user input")
     
     response = VoiceResponse()
-    # speech_result is a string and can by used as such
-    speech_result = request.form.get("SpeechResult", "")
-    
+    # speech_result is a string and can be used as such
+    speech_result = Request.form["SpeechResult"]
+
     # if "hang up" is included in the speech_result, exit the function/end the call
     if "hang up" in speech_result:
         print("User requested to hang up")
@@ -112,8 +114,8 @@ def process_speech():
 
     return str(response)
 
-@app.route("/call_ended", methods=["GET", "POST"])
-def callEnded():
+@router.api_route("/call_ended", methods=["GET", "POST"])
+def call_ended():
     # Once the call ends, prompt ChatGPT to generate a short summary of the call for the 'response' key of the db
     print("Call ended")
     if len(conversation) > 1:
@@ -126,6 +128,3 @@ def callEnded():
         print("Call summary: " + chatgpt_response.choices[0].message.content)
     
     return "Summary completed"
-
-if __name__ == "__main__":
-    app.run(debug=True, port=5050)

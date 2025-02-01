@@ -28,3 +28,6 @@ typing_extensions==4.12.2
 tzlocal==5.2
 urllib3==2.2.3
 yt-dlp==2025.1.26
+twilio==9.4.4
+azure-cognitiveservices-speech==1.42.0
+azure-cognitiveservices-speech==1.42.0

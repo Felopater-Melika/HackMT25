@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from endpoints.users import router as users_router
+from services.twiliogpt import router as twiliogpt_router
 from loguru import logger
 from datetime import datetime
 import os
@@ -15,7 +16,7 @@ logger.add(log_file, format="{time} {level} {message}", level="INFO")
 
 # Include routers
 app.include_router(users_router)
-# app.include_router(items_router)
+app.include_router(twiliogpt_router)
 
 @app.get("/")
 async def root():
