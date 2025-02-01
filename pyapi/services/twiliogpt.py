@@ -7,9 +7,12 @@ from twilio.rest import Client
 from twilio.twiml.voice_response import VoiceResponse
 import openai
 from pydantic import BaseModel
+from datetime import datetime
 
 
 load_dotenv()
+
+logger.add(f"./services/logs/twiliogpt_{datetime.now().strftime('%Y-%m-%d_%H_%M')}.log", rotation="10MB")
 
 router = APIRouter()
 # init gpt client
