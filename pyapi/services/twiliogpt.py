@@ -1,5 +1,5 @@
 #twiliogpt.py
-from fastapi import APIRouter, Form, Request
+from fastapi import APIRouter, Form, Request, Response
 from loguru import logger
 from dotenv import load_dotenv
 import os
@@ -24,8 +24,8 @@ TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
 NGROK_URL = os.environ["NGROK_URL"]
 
 # hardcoded test data
-patient_contact_info = "+16155546954"
-patient_first_name = "Noah"
+patient_contact_info = os.environ["PATIENT_PHONE_NUMBER"]
+patient_first_name = "John"
 
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
@@ -67,28 +67,30 @@ def answer_call():
     response.gather(
         input="speech",
         action="/process_speech",
-        timeout=1,
+        timeout=5,
         speech_timeout="auto",
         barge_in=True
     )
-
-    return str(response)
+    print(str(response))
+    return Response(content=str(response), media_type="application/xml")
 
 @router.post("/process_speech")
-def process_speech():
-    
+async def process_speech(request: Request):
     logger.info("Processing user input")
-    
+
     response = VoiceResponse()
     # speech_result is a string and can be used as such
-    speech_result = Request.form["SpeechResult"]
+    form_date = await request.form()
+    speech_result = form_date.get("SpeechResult")
+
+    logger.warning("Speech Result: " + speech_result)
 
     # if "hang up" is included in the speech_result, exit the function/end the call
     if "hang up" in speech_result:
         logger.info("User requested to hang up")
         response.say("Goodbye")
         return
-    
+
     # add user response and logger.info response, as to keep a log of the conversation
     logger.info("User Input:", speech_result)
     conversation.append({"role": "user", "content": speech_result})
@@ -111,11 +113,11 @@ def process_speech():
     except Exception as e:
         logger.info("OpenAI API Error:", e)
         response.say("Sorry, I have experienced a software issue.")
-    
+
     # return to the answer_call function, which will continue the conversation
     response.redirect("/answer")
 
-    return str(response)
+    return Response(content=str(response), media_type="application/xml")
 
 @router.api_route("/call_ended", methods=["GET", "POST"])
 def call_ended():
