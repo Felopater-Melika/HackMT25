@@ -1,9 +1,24 @@
 
 import datetime
 import enum
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Enum
-from sqlalchemy.orm import relationship
-from config import Base, engine, SessionLocal  # Import config objects
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Enum, create_engine
+from sqlalchemy.orm import relationship, sessionmaker
+
+#from sqlalchemy import create_engine, Column, Integer, String, DateTime
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.sql import func
+import getpass  # To securely input passwords
+from passlib.hash import bcrypt  # For password hashing
+
+# Database setup
+Base = declarative_base()
+engine = create_engine(
+    "sqlite:///sql.db",
+    connect_args={"check_same_thread": False},
+    echo=True  # Optional: shows SQL logging
+)
+Session = sessionmaker(bind=engine)
+session = Session()
 
 # Optional: Define an enumeration for medication schedule statuses
 class ScheduleStatus(enum.Enum):
@@ -132,9 +147,76 @@ class CallLog(Base):
     medication_schedule = relationship("MedicationSchedule", back_populates="call_logs")
     patient = relationship("Patient", back_populates="call_logs")
 
-# ---------------------------
-# Create the Database Tables
-# ---------------------------
-if __name__ == '__main__':
+# Create the tables
+#Base.metadata.create_all(engine)
+
+# Function to add caregiver
+def caregiver_register():
+    username = input("Enter username: ")
+    email = input("Enter email: ")
+    
+    # Secure password input
+    password = getpass.getpass("Enter password: ")
+    confirm_password = getpass.getpass("Confirm password: ")
+    
+    if password != confirm_password:
+        print("Passwords do not match.")
+        return
+
+    # Hash the password before storing
+    hashed_password = bcrypt.hash(password)
+
+    # Check if email or username already exists
+    if session.query(Caregiver).filter((Caregiver.email == email) | (Caregiver.username == username)).first():
+        print("Username or email already exists.")
+        return
+
+    # Add new caregiver
+    new_caregiver = Caregiver(
+        username=username,
+        email=email,
+        hashed_password=hashed_password
+    )
+    
+    session.add(new_caregiver)
+    session.commit()
+    print(f"Caregiver '{username}' added successfully!")
+
+def caregiver_authenticate(email, password):
+    caregiver = session.query(Caregiver).filter_by(email=email).first()
+    if caregiver:
+        if bcrypt.verify(password, caregiver.hashed_password):
+            print("Login successful!")
+            return caregiver  # Returning caregiver object for further operations
+        else:
+            print("Incorrect password.")
+    else:
+        print("Email not found.")
+
+def caregiver_login():
+    # Input from user
+    email_input = input("Enter your email: ")
+    password_input = input("Enter your password: ")
+
+    # Login attempt
+    logged_in_caregiver = caregiver_authenticate(email_input, password_input)
+
+
+
+# Main loop
+if __name__ == "__main__":
     Base.metadata.create_all(engine)
     print("Database tables created successfully!")
+
+    while True:
+        print("\n1. Login\n2. Register\n3. Exit")
+        choice = input("Choose an option: ")
+        
+        if choice == '1':
+            caregiver_login()
+        elif choice == '2':
+            caregiver_register()
+        elif choice == '3':
+            break
+        else:
+            print("Invalid option. Try again.")
