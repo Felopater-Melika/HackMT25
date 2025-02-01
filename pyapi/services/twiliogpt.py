@@ -19,8 +19,10 @@ conversation = []
 
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
-# TWILIO_PHONE_NUMBER = "+18445485842"
-TWILIO_PHONE_NUMBER = "+19137330309"
+TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
+
+NGROK_URL = os.environ["NGROK_URL"]
+
 # hardcoded test data
 patient_contact_info = "+16155546954"
 patient_first_name = "Noah"
@@ -40,8 +42,8 @@ def make_call():
     twilio_client.calls.create(
         to=patient_contact_info,
         from_=TWILIO_PHONE_NUMBER,
-        url="https://e09e-161-45-254-242.ngrok-free.app/answer", # must be updated whenever ngrok is launched
-        status_callback="https://e09e-161-45-254-242.ngrok-free.app/call_ended"
+        url=f"{NGROK_URL}/answer", # must be updated whenever ngrok is launched
+        status_callback=f"{NGROK_URL}/call_ended"
     )
     return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
 
