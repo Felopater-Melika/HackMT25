@@ -49,11 +49,17 @@ patient_data = None
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-@router.get("/make_call")
-def make_call():
+@router.post("/request")
+async def request(request: Request):
     global patient_data
     json_data = await request.json()
     patient_data = json.loads(json_data)
+    logger.info("Request received")
+    # Route to make_call
+    return make_call()
+
+@router.get("/make_call")
+def make_call():
     logger.info("Placing call")
     
     prompt = f"""
@@ -77,12 +83,12 @@ def make_call():
     conversation.append({"role": "system", "content": prompt})
     
     twilio_client.calls.create(
-        to=patient_contact_info,
+        to=patient_data["phone_number"],
         from_=TWILIO_PHONE_NUMBER,
         url=f"{NGROK_URL}/answer",
         status_callback=f"{NGROK_URL}/call_ended"
     )
-    return f"Calling {patient_data["first_name"]} at {patient_data["phone_number"]}"
+    return f"Calling {patient_data['first_name']} at {patient_data['phone_number']}"
 
 @router.post("/answer")
 def answer_call():
@@ -95,7 +101,7 @@ def answer_call():
     
     logger.info("Answering call or responding")
     logger.info("Conversation length is "+ str(conv_len))
-    logger.info(f"Patient: {patient_data["first_name"]} {patient_data["last_name"]}")
+    logger.info(f"Patient: {patient_data['first_name']} {patient_data['last_name']}")
     
     # if len(conversation) == 1, this is the first TTS of the call, therefore it should greet the user
     if conv_len == 1:
