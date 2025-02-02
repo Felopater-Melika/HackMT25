@@ -106,7 +106,7 @@ class MedicationSchedule(Base):
 
     prescription = relationship("Prescription", back_populates="medication_schedules", uselist=False)
     medication_logs = relationship("MedicationLog", back_populates="medication_schedule", uselist=False)
-
+'''
 # ---------------------------
 # Medication
 # ---------------------------
@@ -117,7 +117,7 @@ class Medication(Base):
     name = Column(String(255), nullable=False)
 
     description = Column(String(255), nullable=False)
-
+'''
 # ---------------------------
 # MedicationLog Model (Tracks Patient Medication Intake)
 # ---------------------------

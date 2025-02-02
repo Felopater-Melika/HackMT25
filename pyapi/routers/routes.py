@@ -4,7 +4,7 @@ from passlib.hash import bcrypt
 from pydantic import BaseModel
 from database import get_db
 from datetime import datetime
-from models import MedicationSchedule, Prescription, MedicationScheduleStatus, Patient, Medication, ScheduledCalls, Caregiver, CallScheduleStatus, CallLog, MedicationSchedule
+from models import MedicationSchedule, Prescription, MedicationScheduleStatus, Patient, ScheduledCalls, Caregiver, CallScheduleStatus, CallLog, MedicationSchedule
 from typing import Optional
 import random
 
@@ -84,7 +84,7 @@ def register_caregiver(caregiver: CaregiverCreate, db: Session = Depends(get_db)
     ).first()
 
     if db_caregiver:
-        raise HTTPException(status_code=400, detail="email already exists.")
+        raise HTTPException(status_code=400, detail="Email already exists.")
 
     patient_id = random.randint(1000, 9999)
     new_patient = Patient(
@@ -164,7 +164,7 @@ def create_medication_schedule(schedule: MedicationScheduleCreate, db: Session =
     db.refresh(new_schedule)
 
     return new_schedule
-
+'''
 @router.post("/medications/", response_model=MedicationCreate)
 def create_medication(medication: MedicationCreate, db: Session = Depends(get_db)):
     db_medication = Medication(
@@ -175,7 +175,7 @@ def create_medication(medication: MedicationCreate, db: Session = Depends(get_db
     db.commit()
     db.refresh(db_medication)
     return db_medication
-
+'''
 @router.post("/patients/{patient_id}/scheduled-calls/")
 def create_scheduled_call(scheduled_calls: CreateScheduledCall, db: Session = Depends(get_db)):
     # Check if schedule exists
@@ -209,10 +209,6 @@ def create_call_log(call_log: CallLogCreate, db: Session = Depends(get_db)):
     db.refresh(new_call_log)
     return new_call_log
 
-#
-# GET
-#
-
 # Login Caregiver
 @router.post("/login/")
 def login_caregiver(caregiver: CaregiverLogin, db: Session = Depends(get_db)):
@@ -221,6 +217,10 @@ def login_caregiver(caregiver: CaregiverLogin, db: Session = Depends(get_db)):
         raise HTTPException(status_code=401, detail="Invalid credentials.")
     
     return db_caregiver
+
+#
+# GET
+#
 
 # Scheduled Calls
 @router.get("/patients/{patient_id}/scheduled-calls/")
@@ -249,3 +249,8 @@ def get_call_logs(patient_id: int, db: Session = Depends(get_db)):
 def get_prescriptions(patient_id: int, db: Session = Depends(get_db)):
     prescriptions = db.query(Prescription).filter(Prescription.patient_id == patient_id).all()
     return prescriptions
+
+@router.get("/medication-schedules/")
+def get_medication_schedule(db: Session = Depends(get_db)):
+    schedules = db.query(MedicationSchedule).all()
+    return schedules
