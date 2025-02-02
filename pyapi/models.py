@@ -53,7 +53,8 @@ class Patient(Base):
     id = Column(Integer, primary_key=True)
     first_name = Column(String(100), nullable=False)
     last_name = Column(String(100), nullable=False)
-    phone_number = Column(String(20), nullable=False) 
+    phone_number = Column(String(20), nullable=False)
+    bio = Column(Text, nullable=True)
     #created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
     #updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
@@ -71,6 +72,7 @@ class Prescription(Base):
     
     id = Column(Integer, primary_key=True)
     name = Column(String(255), nullable=False)
+    nick = Column(String(100), nullable=True)
     patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
     
     method = Column(String(100), nullable=False)  # Example: "Oral", "Injection"
@@ -99,12 +101,11 @@ class MedicationSchedule(Base):
     
     scheduled_time = Column(DateTime, nullable=False)
     status = Column(Enum(MedicationScheduleStatus), default=MedicationScheduleStatus.active, nullable=False)
-    confirmation_time = Column(DateTime, nullable=True)
 
     #updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    prescription = relationship("Prescription", back_populates="medication_schedules")
-    medication_logs = relationship("MedicationLog", back_populates="medication_schedule")
+    prescription = relationship("Prescription", back_populates="medication_schedules", uselist=False)
+    medication_logs = relationship("MedicationLog", back_populates="medication_schedule", uselist=False)
 
 # ---------------------------
 # Medication
@@ -139,7 +140,7 @@ class MedicationLog(Base):
 # ---------------------------
 class ScheduledCalls(Base):
     __tablename__ = "scheduled_calls"
-    
+
     id = Column(Integer, primary_key=True)
     patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
     
