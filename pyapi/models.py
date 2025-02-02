@@ -27,16 +27,6 @@ class MedicationLogStatus(enum.Enum):
     delayed = "delayed"
 
 # ---------------------------
-# Many-to-Many Relationship: Caregivers & Patients
-# ---------------------------
-caregiver_patient_association = Table(
-    "caregiver_patient_association",
-    Base.metadata,
-    Column("caregiver_id", Integer, ForeignKey("caregivers.id"), primary_key=True),
-    Column("patient_id", Integer, ForeignKey("patients.id"), primary_key=True)
-)
-
-# ---------------------------
 # Caregiver Model
 # ---------------------------
 class Caregiver(Base):
@@ -51,7 +41,8 @@ class Caregiver(Base):
     #created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
     #updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    patients = relationship("Patient", secondary=caregiver_patient_association, back_populates="caregivers")
+    patient_id = Column(Integer, ForeignKey('patients.id'))
+    #patient = relationship("Patient", back_populates="caregiver", uselist=False)
 
 # ---------------------------
 # Patient Model
@@ -66,7 +57,8 @@ class Patient(Base):
     #created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
     #updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 
-    caregivers = relationship("Caregiver", secondary=caregiver_patient_association, back_populates="patients")
+    #caregiver_id = Column(Integer, ForeignKey('caregivers.id'))
+    #caregiver = relationship("Caregiver", back_populates="patient", uselist=False)
     patient_medications = relationship("Prescription", back_populates="patient")
     medication_logs = relationship("MedicationLog", back_populates="patient")
     call_logs = relationship("CallLog", back_populates="patient")
@@ -143,6 +135,17 @@ class MedicationLog(Base):
     call_log = relationship("CallLog", back_populates="medication_logs")
 
 # ---------------------------
+# Scheduled Calls Model
+# ---------------------------
+class ScheduledCalls(Base):
+    __tablename__ = "scheduled_calls"
+    
+    id = Column(Integer, primary_key=True)
+    patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
+    
+    call_time = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
+
+# ---------------------------
 # CallLog Model
 # ---------------------------
 class CallLog(Base):
@@ -156,6 +159,7 @@ class CallLog(Base):
     transcription = Column(Text, nullable=True)
     summary = Column(Text, nullable=True)
     alert = Column(Text, nullable=True)
+    follow_up = Column(Text, nullable=True)
 
     #created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
 
