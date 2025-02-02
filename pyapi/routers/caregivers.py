@@ -4,7 +4,7 @@ from passlib.hash import bcrypt
 from pydantic import BaseModel
 from database import get_db
 from datetime import datetime
-from models import MedicationSchedule, Prescription, MedicationScheduleStatus, Patient, Medication, ScheduledCalls, Caregiver
+from models import MedicationSchedule, Prescription, MedicationScheduleStatus, Patient, Medication, ScheduledCalls, Caregiver, CallScheduleStatus
 from typing import Optional
 import random
 
@@ -61,6 +61,15 @@ class CreateScheduledCall(BaseModel):
 
 class GetScheduledCalls(BaseModel):
     patient_id: int
+
+# CallLog Create
+class CallLogCreate(BaseModel):
+    patient_id: int
+    call_time: Optional[datetime] = None
+    call_status: CallScheduleStatus = CallScheduleStatus.pending
+    transcription: Optional[str] = None
+    summary: Optional[str] = None
+    alert: Optional[str] = None
 
 # Register Caregiver
 @router.post("/register")
@@ -205,3 +214,10 @@ def get_scheduled_calls(scheduled_calls: GetScheduledCalls, db: Session = Depend
         raise HTTPException(status_code=404, detail="Scheduled call not found")
 
     return {"id": db_scheduled_call.id, "patient_id": db_scheduled_call.patient_id, "call_time": db_scheduled_call.call_time}
+
+@router.get("/patients/")
+def get_patient_by_id(patient_id: int, db: Session = Depends(get_db)):
+    db_patient = db.query(Patient).filter(Patient.id == patient_id).first()
+    if not db_patient:
+        raise HTTPException(status_code=404, detail="Patient not found")
+    return db_patient
