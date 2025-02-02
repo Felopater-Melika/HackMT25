@@ -1,5 +1,4 @@
 from fastapi import FastAPI
-from routers import routes
 from services.twiliogpt import router as twiliogpt_router
 from loguru import logger
 from datetime import datetime
