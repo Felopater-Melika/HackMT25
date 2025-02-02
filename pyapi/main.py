@@ -1,10 +1,7 @@
 from fastapi import FastAPI
 from database import Base, engine
-from routers import users
+from routers import caregivers
 from fastapi.middleware.cors import CORSMiddleware
-
-# Create the database tables
-Base.metadata.create_all(bind=engine)
 
 # FastAPI app initialization
 app = FastAPI()
@@ -18,7 +15,7 @@ app.add_middleware(
 )
 
 # Include the Caregiver router
-app.include_router(users.router)
+app.include_router(caregivers.router)
 
 @app.get("/")
 async def root():

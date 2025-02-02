@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 export default function SignUpPage() {
   const router = useRouter();
   const [formData, setFormData] = useState({
-    //username: "",
+    username: "",
     email: "",
     password: "",
     confirm_password: "",
@@ -27,7 +27,7 @@ export default function SignUpPage() {
       return;
     }
 
-    const response = await fetch("http://localhost:8000/caregivers/register", { // THE PORT OF BACKEND SERVER!!! DIFFERENT THAN FRONT END!!!!
+    const response = await fetch("http://localhost:8000/caregivers/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -51,9 +51,8 @@ export default function SignUpPage() {
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
-            
-            <Input type="firstname" name="firstname" placeholder="John" onChange={handleChange} required />
-            <Input type="lastname" name="lastname" placeholder="Doe" onChange={handleChange} required />          
+            <Input name="first_name" placeholder="John" onChange={handleChange} required />
+            <Input name="last_name" placeholder="Doe" onChange={handleChange} required />
             <Input type="email" name="email" placeholder="Email" onChange={handleChange} required />
             <Input type="password" name="password" placeholder="Password" onChange={handleChange} required />
             <Input type="password" name="confirm_password" placeholder="Confirm Password" onChange={handleChange} required />
