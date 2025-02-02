@@ -12,6 +12,7 @@
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
 db.sqlite
+**/sql.db
 
 # next.js
 /.next/
@@ -48,3 +49,4 @@ yarn-error.log*
 bun.lock
 
 pyapi/.venv
+**.pyc
