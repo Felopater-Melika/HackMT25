@@ -36,11 +36,11 @@ dummy_data = CallRequest(
         last_name="Doe",
         follow_up_topics="Nephew's piano concert, back pain, medication refills",
         phone_number="+16155856532",
-        caregiver_number="+1234567890",
+        caregiver_number="lilchwis@gmail.com",
         prescriptions={"levothyroxine": "taken", "ibuprofen": "not", "amlodipine" : "delayed"},
         bio="John is a 65 year old man who loves football. He has diabetes and high blood pressure.",
-        hour="1",
-        minute="25",
+        hour="2",
+        minute="38",
     )
 schedule_call(dummy_data)
 
