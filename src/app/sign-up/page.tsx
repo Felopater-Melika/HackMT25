@@ -54,6 +54,7 @@ export default function SignUpPage() {
             <Input name="first_name" placeholder="John" onChange={handleChange} required />
             <Input name="last_name" placeholder="Doe" onChange={handleChange} required />
             <Input type="email" name="email" placeholder="Email" onChange={handleChange} required />
+            <Input type="phone_number" name="phone_number" placeholder="(123) 456 7890" onChange={handleChange} required />
             <Input type="password" name="password" placeholder="Password" onChange={handleChange} required />
             <Input type="password" name="confirm_password" placeholder="Confirm Password" onChange={handleChange} required />
             {error && <p className="text-red-500 text-sm">{error}</p>}
