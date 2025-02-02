@@ -8,7 +8,7 @@ from twilio.twiml.voice_response import VoiceResponse
 import openai
 from pydantic import BaseModel
 from datetime import datetime
-
+import json
 
 load_dotenv()
 
@@ -41,41 +41,38 @@ TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
 NGROK_URL = os.environ["NGROK_URL"]
 
 # hardcoded test data
-patient_contact_info = os.environ["PATIENT_PHONE_NUMBER"]
-patient_first_name = "John"
+# patient_contact_info = os.environ["PATIENT_PHONE_NUMBER"]
+# patient_first_name = "John"
+
+patient_data = None
 
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-@router.post('/request')
-def process_json(request: Request):
-    json_data = await request.json()
-    print(f"Recieved JSON: {json_data}")
-    
-
-
 @router.get("/make_call")
 def make_call():
-    
+    global patient_data
+    json_data = await request.json()
+    patient_data = json.loads(json_data)
     logger.info("Placing call")
     
     prompt = f"""
     You are checking in on an elderly patient.
-    Their name is {patient_first_name}. Ask to make sure they are feeling healthy and well, 
+    Their name is {[patient_data["first_name"]]}. Ask to make sure they are feeling healthy and well, 
     and ask whether they've taken their medications today. Keep your answers reasonably short.
     If at any point it seems like they have a serious concern, 
     remimd them they should call their doctor or 911 (say as nine-one-one) for emergencies.
     Do not offer to call emergency services for them.
     Ask them one-by-one about their medications after checking in with the patient's personal life,
     and if they are taking them as prescribed.
-    Medications: {medications}
+    Medications: {patient_data["prescription_name"]}
     """
     
     if follow_up_topics:
         prompt += f"""
         Here is a list of follow up topics from the previous phone call.
         Spend some time discussing these briefly to be more personable at the beginning of the call:
-        {follow_up_topics}"""
+        {patient_data["follow_up_topics"]}"""
     
     conversation.append({"role": "system", "content": prompt})
     
@@ -85,7 +82,7 @@ def make_call():
         url=f"{NGROK_URL}/answer",
         status_callback=f"{NGROK_URL}/call_ended"
     )
-    return f"Calling " + str(patient_first_name) + " at " + str(patient_contact_info)
+    return f"Calling {patient_data["first_name"]} at {patient_data["phone_number"]}"
 
 @router.post("/answer")
 def answer_call():
@@ -98,11 +95,11 @@ def answer_call():
     
     logger.info("Answering call or responding")
     logger.info("Conversation length is "+ str(conv_len))
-    logger.info("Patient: " + str(patient_first_name))
+    logger.info(f"Patient: {patient_data["first_name"]} {patient_data["last_name"]}")
     
     # if len(conversation) == 1, this is the first TTS of the call, therefore it should greet the user
     if conv_len == 1:
-        response.say("Hi " + str(patient_first_name) + "! This is Blue Buddy calling to check in on you!", voice="alice")
+        response.say("Hi " + patient_data["first_name"] + "! This is Blue Buddy calling to check in on you!", voice="alice")
         
     response.gather(
         input="speech",
@@ -165,7 +162,7 @@ async def process_speech(request: Request):
         medication_status = output.status
         medication_updates[medication_name] = medication_status
         
-        print("GPT response took " + str(time.time() - start_time) + " seconds")
+        logger.info("GPT response took " + str(time.time() - start_time) + " seconds")
     except Exception as e:   
         print(e)
         is_hang_up = False
