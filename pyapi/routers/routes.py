@@ -121,7 +121,7 @@ def create_patient(patient: PatientCreate, db: Session = Depends(get_db)):
     db.refresh(db_patient)
     return db_patient
 
-@router.post("/patients/{patient_id}/prescriptions/")
+@router.post("/patients/prescriptions/")
 def create_prescription(prescription: PrescriptionCreate, db: Session = Depends(get_db)):
     db_prescription = Prescription(
         name=prescription.name,
@@ -174,7 +174,7 @@ def create_medication(medication: MedicationCreate, db: Session = Depends(get_db
     db.refresh(db_medication)
     return db_medication
 '''
-@router.post("/patients/{patient_id}/scheduled-calls/")
+@router.post("/patients/scheduled-calls/")
 def create_scheduled_call(scheduled_calls: CreateScheduledCall, db: Session = Depends(get_db)):
     # Check if schedule exists
     #db_scheduled_calls = db.query(ScheduledCalls).filter(ScheduledCalls.id == scheduled_calls.id).first()
@@ -192,7 +192,7 @@ def create_scheduled_call(scheduled_calls: CreateScheduledCall, db: Session = De
     db.refresh(new_schedule)
     return new_schedule
 
-@router.post("/patients/{patient_id}/call-logs/")
+@router.post("/patients/call-logs/")
 def create_call_log(call_log: CallLogCreate, db: Session = Depends(get_db)):
     new_call_log = CallLog(
         patient_id=call_log.patient_id,
@@ -221,34 +221,30 @@ def login_caregiver(caregiver: CaregiverLogin, db: Session = Depends(get_db)):
 #
 
 # Scheduled Calls
-@router.get("/patients/{patient_id}/scheduled-calls/")
-def get_scheduled_calls(patient_id: int, db: Session = Depends(get_db)):
-    # Fetch scheduled calls for the patient
-    db_scheduled_calls = db.query(ScheduledCalls).filter(ScheduledCalls.patient_id == patient_id).all()
-    
-    if not db_scheduled_calls:
-        raise HTTPException(status_code=404, detail="No scheduled calls found for this patient")
-
-    return db_scheduled_calls  # Returns a list of scheduled calls
-
-@router.get("/patients/{patient_id}")
-def get_patient_by_id(patient_id: int, db: Session = Depends(get_db)):
-    db_patient = db.query(Patient).filter(Patient.id == patient_id).first()
-    if not db_patient:
+@router.get("/patients/{patient_id}/details")
+def get_patient_details(patient_id: int, db: Session = Depends(get_db)):
+    # Query the patient
+    patient = db.query(Patient).filter(Patient.id == patient_id).first()
+    if not patient:
         raise HTTPException(status_code=404, detail="Patient not found")
-    return db_patient
 
-@router.get("/patients/{patient_id}/call-logs/")
-def get_call_logs(patient_id: int, db: Session = Depends(get_db)):
-    call_logs = db.query(CallLog).filter(CallLog.patient_id == patient_id).all()
-    return call_logs
-
-@router.get("/patients/{patient_id}/prescriptions/")
-def get_prescriptions(patient_id: int, db: Session = Depends(get_db)):
+    # Query related prescriptions
     prescriptions = db.query(Prescription).filter(Prescription.patient_id == patient_id).all()
-    return prescriptions
 
-@router.get("/medication-schedules/")
-def get_medication_schedule(db: Session = Depends(get_db)):
-    schedules = db.query(MedicationSchedule).all()
-    return schedules
+    # Query related medication schedules
+    medication_schedules = db.query(MedicationSchedule).filter(MedicationSchedule.patient_id == patient_id).all()
+
+    # Query related scheduled calls
+    scheduled_calls = db.query(ScheduledCalls).filter(ScheduledCalls.patient_id == patient_id).all()
+
+    # Query related call logs
+    call_logs = db.query(CallLog).filter(CallLog.patient_id == patient_id).all()
+
+    # Return all data in a structured response
+    return {
+        "patient": patient,
+        "prescriptions": prescriptions,
+        "medication_schedules": medication_schedules,
+        "scheduled_calls": scheduled_calls,
+        "call_logs": call_logs,
+    }

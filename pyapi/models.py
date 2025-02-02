@@ -98,6 +98,7 @@ class MedicationSchedule(Base):
     
     id = Column(Integer, primary_key=True)
     prescription_id = Column(Integer, ForeignKey("prescriptions.id"), nullable=False)
+    patient_id = Column(Integer, ForeignKey("patients.id"), nullable=False)
     
     scheduled_time = Column(DateTime, nullable=False)
     status = Column(Enum(MedicationScheduleStatus), default=MedicationScheduleStatus.active, nullable=False)
