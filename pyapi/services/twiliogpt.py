@@ -47,6 +47,13 @@ patient_first_name = "John"
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
+@router.post('/request')
+def process_json(request: Request):
+    json_data = await request.json()
+    print(f"Recieved JSON: {json_data}")
+    
+
+
 @router.get("/make_call")
 def make_call():
     
@@ -111,6 +118,8 @@ class ProcessResponse(BaseModel):
     hang_up: bool
     medication: str
     status: str    
+
+
 
 @router.post("/process_speech")
 async def process_speech(request: Request):
