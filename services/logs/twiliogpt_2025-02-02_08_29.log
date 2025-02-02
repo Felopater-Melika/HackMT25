@@ -1,0 +1,71 @@
+2025-02-02 08:33:10.709 | INFO     | services.twiliogpt:make_call:68 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 08:33:10.709 | INFO     | services.twiliogpt:make_call:72 - Placing call
+2025-02-02 08:33:28.938 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:33:28.938 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:33:28.938 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 1
+2025-02-02 08:33:28.939 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:33:35.990 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:33:35.991 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: Hi, how are you?
+2025-02-02 08:33:35.991 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:33:37.128 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 1.1370935440063477 seconds
+2025-02-02 08:33:38.652 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:33:43.897 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:33:43.897 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:33:43.897 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 3
+2025-02-02 08:33:43.898 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:33:48.482 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:33:48.482 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: I'm feeling pretty bad. My head hurts.
+2025-02-02 08:33:48.483 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:33:49.200 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 0.7172565460205078 seconds
+2025-02-02 08:33:50.876 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:34:10.707 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:34:10.707 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:34:10.707 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 5
+2025-02-02 08:34:10.707 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:34:15.414 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:34:15.415 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: No, it only made my headache worse.
+2025-02-02 08:34:15.415 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:34:16.229 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 0.8146407604217529 seconds
+2025-02-02 08:34:17.559 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:34:31.598 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:34:31.599 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:34:31.599 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 7
+2025-02-02 08:34:31.599 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:34:36.202 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:34:36.202 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: Not as much as I had been before.
+2025-02-02 08:34:36.202 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:34:37.426 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 1.2236435413360596 seconds
+2025-02-02 08:34:38.606 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:34:47.774 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:34:47.774 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:34:47.774 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 9
+2025-02-02 08:34:47.774 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:34:51.656 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:34:51.657 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: Which medications that I need refilled.
+2025-02-02 08:34:51.657 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:34:52.479 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 0.8217716217041016 seconds
+2025-02-02 08:34:53.315 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:35:00.580 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:35:00.580 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:35:00.580 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 11
+2025-02-02 08:35:00.580 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:35:04.767 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:35:04.768 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: Yes, I have.
+2025-02-02 08:35:04.768 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:35:05.307 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 0.539480447769165 seconds
+2025-02-02 08:35:06.752 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:35:18.693 | INFO     | services.twiliogpt:answer_call:109 - answer
+2025-02-02 08:35:18.693 | INFO     | services.twiliogpt:answer_call:115 - Answering call or responding
+2025-02-02 08:35:18.693 | INFO     | services.twiliogpt:answer_call:116 - Conversation length is 13
+2025-02-02 08:35:18.693 | INFO     | services.twiliogpt:answer_call:117 - Patient: Freeman Hudson
+2025-02-02 08:35:22.185 | INFO     | services.twiliogpt:process_speech:142 - Processing user input
+2025-02-02 08:35:22.186 | WARNING  | services.twiliogpt:process_speech:149 - Speech Result: No. Thank you. Have a great day.
+2025-02-02 08:35:22.186 | INFO     | services.twiliogpt:process_speech:152 - User Input:
+2025-02-02 08:35:22.845 | INFO     | services.twiliogpt:process_speech:184 - GPT response took 0.6591670513153076 seconds
+2025-02-02 08:35:22.845 | INFO     | services.twiliogpt:process_speech:191 - User requested to hang up
+2025-02-02 08:35:23.573 | INFO     | services.twiliogpt:process_speech:208 - AI Response:
+2025-02-02 08:35:24.536 | INFO     | services.twiliogpt:call_ended:229 - Call ended
+2025-02-02 08:35:26.894 | INFO     | services.twiliogpt:call_ended:250 - Call summary: The medical assistant checked in on Freeman, who reported having a bad headache. While the assistant advised Freeman to contact a doctor if the headache became severe, Freeman also mentioned that attending a concert made it worse. They discussed Freeman's reduced back pain and reiterated the importance of taking and refilling medications, specifically the medication "sadf." Freeman confirmed taking the medication as prescribed.
+2025-02-02 08:35:26.894 | INFO     | services.twiliogpt:call_ended:251 - Follow-up topics: headache follow-up,back pain status,medication schedule,medication refills,nephew's activities
+2025-02-02 08:35:26.894 | INFO     | services.twiliogpt:call_ended:252 - Is emergency: False
+2025-02-02 08:35:26.894 | INFO     | services.twiliogpt:call_ended:253 - Medication updates: {'sadf': 'taken'}

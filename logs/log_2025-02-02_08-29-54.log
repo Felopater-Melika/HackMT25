@@ -1,0 +1,71 @@
+2025-02-02T08:33:10.709528-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T08:33:10.709789-0600 INFO Placing call
+2025-02-02T08:33:28.938654-0600 INFO answer
+2025-02-02T08:33:28.938890-0600 INFO Answering call or responding
+2025-02-02T08:33:28.938974-0600 INFO Conversation length is 1
+2025-02-02T08:33:28.939044-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:33:35.990501-0600 INFO Processing user input
+2025-02-02T08:33:35.991286-0600 WARNING Speech Result: Hi, how are you?
+2025-02-02T08:33:35.991372-0600 INFO User Input:
+2025-02-02T08:33:37.128545-0600 INFO GPT response took 1.1370935440063477 seconds
+2025-02-02T08:33:38.652495-0600 INFO AI Response:
+2025-02-02T08:33:43.897594-0600 INFO answer
+2025-02-02T08:33:43.897832-0600 INFO Answering call or responding
+2025-02-02T08:33:43.897952-0600 INFO Conversation length is 3
+2025-02-02T08:33:43.898060-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:33:48.482379-0600 INFO Processing user input
+2025-02-02T08:33:48.482991-0600 WARNING Speech Result: I'm feeling pretty bad. My head hurts.
+2025-02-02T08:33:48.483128-0600 INFO User Input:
+2025-02-02T08:33:49.200515-0600 INFO GPT response took 0.7172565460205078 seconds
+2025-02-02T08:33:50.876812-0600 INFO AI Response:
+2025-02-02T08:34:10.707228-0600 INFO answer
+2025-02-02T08:34:10.707479-0600 INFO Answering call or responding
+2025-02-02T08:34:10.707572-0600 INFO Conversation length is 5
+2025-02-02T08:34:10.707652-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:34:15.414560-0600 INFO Processing user input
+2025-02-02T08:34:15.415072-0600 WARNING Speech Result: No, it only made my headache worse.
+2025-02-02T08:34:15.415166-0600 INFO User Input:
+2025-02-02T08:34:16.229896-0600 INFO GPT response took 0.8146407604217529 seconds
+2025-02-02T08:34:17.559531-0600 INFO AI Response:
+2025-02-02T08:34:31.598899-0600 INFO answer
+2025-02-02T08:34:31.599148-0600 INFO Answering call or responding
+2025-02-02T08:34:31.599281-0600 INFO Conversation length is 7
+2025-02-02T08:34:31.599418-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:34:36.202367-0600 INFO Processing user input
+2025-02-02T08:34:36.202829-0600 WARNING Speech Result: Not as much as I had been before.
+2025-02-02T08:34:36.202954-0600 INFO User Input:
+2025-02-02T08:34:37.426697-0600 INFO GPT response took 1.2236435413360596 seconds
+2025-02-02T08:34:38.606855-0600 INFO AI Response:
+2025-02-02T08:34:47.774183-0600 INFO answer
+2025-02-02T08:34:47.774411-0600 INFO Answering call or responding
+2025-02-02T08:34:47.774543-0600 INFO Conversation length is 9
+2025-02-02T08:34:47.774642-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:34:51.656907-0600 INFO Processing user input
+2025-02-02T08:34:51.657446-0600 WARNING Speech Result: Which medications that I need refilled.
+2025-02-02T08:34:51.657544-0600 INFO User Input:
+2025-02-02T08:34:52.479396-0600 INFO GPT response took 0.8217716217041016 seconds
+2025-02-02T08:34:53.315819-0600 INFO AI Response:
+2025-02-02T08:35:00.580364-0600 INFO answer
+2025-02-02T08:35:00.580596-0600 INFO Answering call or responding
+2025-02-02T08:35:00.580703-0600 INFO Conversation length is 11
+2025-02-02T08:35:00.580802-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:35:04.767614-0600 INFO Processing user input
+2025-02-02T08:35:04.768144-0600 WARNING Speech Result: Yes, I have.
+2025-02-02T08:35:04.768266-0600 INFO User Input:
+2025-02-02T08:35:05.307853-0600 INFO GPT response took 0.539480447769165 seconds
+2025-02-02T08:35:06.752371-0600 INFO AI Response:
+2025-02-02T08:35:18.693615-0600 INFO answer
+2025-02-02T08:35:18.693833-0600 INFO Answering call or responding
+2025-02-02T08:35:18.693910-0600 INFO Conversation length is 13
+2025-02-02T08:35:18.693973-0600 INFO Patient: Freeman Hudson
+2025-02-02T08:35:22.185463-0600 INFO Processing user input
+2025-02-02T08:35:22.186069-0600 WARNING Speech Result: No. Thank you. Have a great day.
+2025-02-02T08:35:22.186193-0600 INFO User Input:
+2025-02-02T08:35:22.845453-0600 INFO GPT response took 0.6591670513153076 seconds
+2025-02-02T08:35:22.845639-0600 INFO User requested to hang up
+2025-02-02T08:35:23.573443-0600 INFO AI Response:
+2025-02-02T08:35:24.536538-0600 INFO Call ended
+2025-02-02T08:35:26.894408-0600 INFO Call summary: The medical assistant checked in on Freeman, who reported having a bad headache. While the assistant advised Freeman to contact a doctor if the headache became severe, Freeman also mentioned that attending a concert made it worse. They discussed Freeman's reduced back pain and reiterated the importance of taking and refilling medications, specifically the medication "sadf." Freeman confirmed taking the medication as prescribed.
+2025-02-02T08:35:26.894589-0600 INFO Follow-up topics: headache follow-up,back pain status,medication schedule,medication refills,nephew's activities
+2025-02-02T08:35:26.894668-0600 INFO Is emergency: False
+2025-02-02T08:35:26.894740-0600 INFO Medication updates: {'sadf': 'taken'}

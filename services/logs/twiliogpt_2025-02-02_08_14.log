@@ -1,0 +1,3 @@
+2025-02-02 08:14:59.682 | INFO     | services.twiliogpt:make_call:68 - {'first_name': 'Zita', 'last_name': 'Price', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '889-523-6607', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['dasf']}, 'bio': 'Tibi spiritus adduco agnosco fugiat aliquam certus.', 'hour': '06', 'minute': '00'}
+2025-02-02 08:14:59.683 | INFO     | services.twiliogpt:make_call:72 - Placing call
+2025-02-02 08:15:01.291 | INFO     | services.twiliogpt:call_ended:225 - Call ended

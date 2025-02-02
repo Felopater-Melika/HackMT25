@@ -1,0 +1,38 @@
+2025-02-02 08:09:33.498 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:09:34.820 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:09:35.284 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:09:35.484 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:09:36.342 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:09:36.848 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:09:36.879 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:09:36.988 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:09:38.389 | INFO     | services.twiliogpt:call_ended:244 - Call summary: The medical assistant called Zita, checking on her well-being and reminding her about medication adherence. Zita confirmed taking her medication and shared updates about her personal life, including attending her nephew's piano concert. The assistant noted Zita's back pain and inquired about her medication refills, ensuring there were no serious concerns.
+2025-02-02 08:09:38.390 | INFO     | services.twiliogpt:call_ended:244 - Call summary: The medical assistant spoke with Zita, checking on her wellbeing and her medication intake. Zita expressed that she had attended her nephew's piano concert, was experiencing mild back pain, and mentioned needing a refill for her medication 'dasf,' which she confirmed to be taking as prescribed. No immediate concerns were raised during the conversation.
+2025-02-02 08:09:38.391 | INFO     | services.twiliogpt:call_ended:244 - Call summary: The medical assistant checked in with Zita, discussing her personal life, including her nephew's piano concert. They inquired about any back pain she might be experiencing and ensured her medication refills were in order. Zita confirmed she was feeling well and had taken her medication (dasf) as prescribed. There were no emergency concerns reported during the call.
+2025-02-02 08:09:38.391 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: nephew's latest recital, back pain management, medication adherence
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: nephew's concert review, back pain management, medication 'dasf' dosage and side-effects
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: nephew's piano progress, current state of back pain, medication adherence, any new concerns
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:09:38.392 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
+2025-02-02 08:09:38.393 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
+2025-02-02 08:09:38.393 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
+2025-02-02 08:09:39.210 | INFO     | services.twiliogpt:call_ended:244 - Call summary: The medical assistant called Zita, an elderly patient, to check on her well-being. They discussed her attendance at her nephew's piano concert, addressed her back pain, and asked about her medication refills. Zita shared that while she managed to attend the concert and enjoyed it, her back pain has been persistently troublesome. However, she has been consistent with her medication schedule and has no immediate refill concerns. No alarming emergency issues were raised during the conversation, though it was gently reinforced that in cases of emergency, Zita should contact her doctor or 9-1-1. The overall health seemed stable, but monitoring of back pain and medication intake is advised.
+2025-02-02 08:09:39.210 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: back pain, medication schedule, concert feedback
+2025-02-02 08:09:39.210 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:09:39.210 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
+2025-02-02 08:12:02.482 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:12:03.976 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:14:04.513 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:14:06.271 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:14:06.759 | INFO     | services.twiliogpt:make_call:70 - Placing call
+2025-02-02 08:14:08.418 | INFO     | services.twiliogpt:call_ended:223 - Call ended
+2025-02-02 08:14:08.934 | INFO     | services.twiliogpt:call_ended:244 - Call summary: The medical assistant, during a check-in call with the elderly patient named Zita, began the conversation by showing personal interest. They asked about Zita's recent activities, including her nephew's piano concert. The conversation then steered towards health-related topics, with the assistant asking if Zita was feeling well and inquiring about her back pain. The discussion also touched upon medication refills and confirmed Zita was taking her medication, dasf, as prescribed.
+2025-02-02 08:14:08.935 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: nephew_piano_concert, back_pain, medication_compliance, medication_refills
+2025-02-02 08:14:08.935 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:14:08.935 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
+2025-02-02 08:14:10.881 | INFO     | services.twiliogpt:call_ended:244 - Call summary: During the check-in call, the medical assistant spoke with Zita, an elderly patient, about her overall well-being, inquired whether she took her medication, and reminded her of the importance of adherence to her prescribed routine. Zita was feeling okay, took her medication as prescribed, and appreciated the check-in on personal matters, specifically her nephew's concert and recent back pain. No severe emergency concerns were raised during the conversation.
+2025-02-02 08:14:10.882 | INFO     | services.twiliogpt:call_ended:245 - Follow-up topics: nephew's concert details, back pain improvement, medication schedule adherence
+2025-02-02 08:14:10.882 | INFO     | services.twiliogpt:call_ended:246 - Is emergency: False
+2025-02-02 08:14:10.882 | INFO     | services.twiliogpt:call_ended:247 - Medication updates: {}
