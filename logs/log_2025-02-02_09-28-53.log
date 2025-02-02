@@ -1,0 +1,31 @@
+2025-02-02T09:29:00.201765-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T09:29:00.202083-0600 INFO Placing call
+2025-02-02T09:29:03.351553-0600 INFO answer
+2025-02-02T09:29:03.351764-0600 INFO Answering call or responding
+2025-02-02T09:29:03.351861-0600 INFO Conversation length is 1
+2025-02-02T09:29:03.351939-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:29:11.136219-0600 INFO Processing user input
+2025-02-02T09:29:11.137451-0600 WARNING Speech Result: Hello, how are you doing?
+2025-02-02T09:29:11.137638-0600 INFO User Input:
+2025-02-02T09:29:12.171776-0600 INFO GPT response took 1.033987045288086 seconds
+2025-02-02T09:29:12.978567-0600 INFO AI Response:
+2025-02-02T09:29:20.549393-0600 INFO answer
+2025-02-02T09:29:20.549615-0600 INFO Answering call or responding
+2025-02-02T09:29:20.549715-0600 INFO Conversation length is 3
+2025-02-02T09:29:20.549805-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:29:23.887638-0600 INFO Processing user input
+2025-02-02T09:29:23.888116-0600 WARNING Speech Result: I'm feeling pretty good today.
+2025-02-02T09:29:23.888200-0600 INFO User Input:
+2025-02-02T09:29:24.545468-0600 INFO GPT response took 0.6571905612945557 seconds
+2025-02-02T09:29:25.262210-0600 INFO AI Response:
+2025-02-02T09:29:31.304753-0600 INFO answer
+2025-02-02T09:29:31.304972-0600 INFO Answering call or responding
+2025-02-02T09:29:31.305077-0600 INFO Conversation length is 5
+2025-02-02T09:29:31.305164-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:29:34.686831-0600 INFO Call ended
+2025-02-02T09:29:36.681243-0600 INFO Call summary: The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.
+2025-02-02T09:29:36.681439-0600 INFO Follow-up topics: back pain,medication adherence,activity level,future medical appointments
+2025-02-02T09:29:36.681529-0600 INFO Is emergency: False
+2025-02-02T09:29:36.681625-0600 INFO Medication updates: {'sadf': 'N/A'}
+2025-02-02T09:29:36.681713-0600 INFO Call summary: The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.
+2025-02-02T09:29:36.681809-0600 INFO {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 29, 36, 681804), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': "The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.", 'alert': '', 'follow_up': 'back pain,medication adherence,activity level,future medical appointments'}

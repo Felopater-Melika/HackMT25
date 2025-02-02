@@ -1,0 +1,77 @@
+2025-02-02T09:33:04.900154-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T09:33:04.900424-0600 INFO Placing call
+2025-02-02T09:33:09.527423-0600 INFO answer
+2025-02-02T09:33:09.527645-0600 INFO Answering call or responding
+2025-02-02T09:33:09.527734-0600 INFO Conversation length is 1
+2025-02-02T09:33:09.527803-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:33:20.459740-0600 INFO Processing user input
+2025-02-02T09:33:20.460513-0600 WARNING Speech Result: Hello.
+2025-02-02T09:33:20.460601-0600 INFO User Input:
+2025-02-02T09:33:21.216776-0600 INFO GPT response took 0.7560975551605225 seconds
+2025-02-02T09:33:21.967501-0600 INFO AI Response:
+2025-02-02T09:33:26.882036-0600 INFO answer
+2025-02-02T09:33:26.882276-0600 INFO Answering call or responding
+2025-02-02T09:33:26.882391-0600 INFO Conversation length is 3
+2025-02-02T09:33:26.882487-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:33:30.268990-0600 INFO Processing user input
+2025-02-02T09:33:30.269481-0600 WARNING Speech Result: I'm good but I have to go goodbye.
+2025-02-02T09:33:30.269580-0600 INFO User Input:
+2025-02-02T09:33:30.898026-0600 INFO GPT response took 0.6283540725708008 seconds
+2025-02-02T09:33:30.898207-0600 INFO User requested to hang up
+2025-02-02T09:33:31.644872-0600 INFO AI Response:
+2025-02-02T09:33:32.537331-0600 INFO Call ended
+2025-02-02T09:33:34.110909-0600 INFO Call summary: Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.
+2025-02-02T09:33:34.111071-0600 INFO Follow-up topics: nephew's piano concert, back pain, medication adherence
+2025-02-02T09:33:34.111142-0600 INFO Is emergency: False
+2025-02-02T09:33:34.111207-0600 INFO Medication updates: {'': '', 'N/A': 'N/A'}
+2025-02-02T09:33:34.111281-0600 INFO Call summary: Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.
+2025-02-02T09:33:34.126148-0600 INFO {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 33, 34, 111368), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': 'Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.', 'alert': '', 'follow_up': "nephew's piano concert, back pain, medication adherence"}
+2025-02-02T09:35:00.921695-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T09:35:00.921922-0600 INFO Placing call
+2025-02-02T09:35:04.741162-0600 INFO answer
+2025-02-02T09:35:04.741345-0600 INFO Answering call or responding
+2025-02-02T09:35:04.741413-0600 INFO Conversation length is 1
+2025-02-02T09:35:04.741473-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:35:12.302828-0600 INFO Processing user input
+2025-02-02T09:35:12.303366-0600 WARNING Speech Result: Hi, how are you doing?
+2025-02-02T09:35:12.303476-0600 INFO User Input:
+2025-02-02T09:35:13.006232-0600 INFO GPT response took 0.7026522159576416 seconds
+2025-02-02T09:35:13.565378-0600 INFO AI Response:
+2025-02-02T09:35:18.562421-0600 INFO answer
+2025-02-02T09:35:18.562633-0600 INFO Answering call or responding
+2025-02-02T09:35:18.562745-0600 INFO Conversation length is 3
+2025-02-02T09:35:18.562883-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:35:25.632001-0600 INFO Processing user input
+2025-02-02T09:35:25.632469-0600 WARNING Speech Result: I feel sick and like, I want to throw up and I have a big headache.
+2025-02-02T09:35:25.632557-0600 INFO User Input:
+2025-02-02T09:35:26.278175-0600 INFO GPT response took 0.6455380916595459 seconds
+2025-02-02T09:35:27.578664-0600 INFO AI Response:
+2025-02-02T09:35:39.150889-0600 INFO answer
+2025-02-02T09:35:39.151079-0600 INFO Answering call or responding
+2025-02-02T09:35:39.151152-0600 INFO Conversation length is 5
+2025-02-02T09:35:39.151217-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:35:43.343782-0600 INFO Processing user input
+2025-02-02T09:35:43.344313-0600 WARNING Speech Result: What medications do I have to take today?
+2025-02-02T09:35:43.344397-0600 INFO User Input:
+2025-02-02T09:35:44.167787-0600 INFO GPT response took 0.8233067989349365 seconds
+2025-02-02T09:35:44.782949-0600 INFO AI Response:
+2025-02-02T09:35:49.824381-0600 INFO answer
+2025-02-02T09:35:49.824625-0600 INFO Answering call or responding
+2025-02-02T09:35:49.824786-0600 INFO Conversation length is 7
+2025-02-02T09:35:49.824904-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:35:55.646600-0600 INFO Processing user input
+2025-02-02T09:35:55.647033-0600 WARNING Speech Result: What's a patrician?
+2025-02-02T09:35:55.647113-0600 INFO User Input:
+2025-02-02T09:35:59.837623-0600 INFO GPT response took 4.190431356430054 seconds
+2025-02-02T09:36:01.478197-0600 INFO AI Response:
+2025-02-02T09:36:16.734986-0600 INFO answer
+2025-02-02T09:36:16.735242-0600 INFO Answering call or responding
+2025-02-02T09:36:16.735377-0600 INFO Conversation length is 9
+2025-02-02T09:36:16.735516-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:36:22.987713-0600 INFO Call ended
+2025-02-02T09:36:24.826023-0600 INFO Call summary: The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.
+2025-02-02T09:36:24.826220-0600 INFO Follow-up topics: medication compliance,nausea symptoms,headache management,patrician curiosity
+2025-02-02T09:36:24.826314-0600 INFO Is emergency: True
+2025-02-02T09:36:24.826395-0600 INFO Medication updates: {'': '', 'N/A': 'N/A', 'sadf': 'not specified'}
+2025-02-02T09:36:24.826472-0600 INFO Call summary: The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.
+2025-02-02T09:36:24.832564-0600 INFO {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 36, 24, 826558), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': "The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.", 'alert': '', 'follow_up': 'medication compliance,nausea symptoms,headache management,patrician curiosity'}

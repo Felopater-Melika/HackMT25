@@ -1,0 +1,77 @@
+2025-02-02 09:33:04.900 | INFO     | services.twiliogpt:make_call:74 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 09:33:04.900 | INFO     | services.twiliogpt:make_call:78 - Placing call
+2025-02-02 09:33:09.527 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:33:09.527 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:33:09.527 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 1
+2025-02-02 09:33:09.527 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:33:20.459 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:33:20.460 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: Hello.
+2025-02-02 09:33:20.460 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:33:21.216 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 0.7560975551605225 seconds
+2025-02-02 09:33:21.967 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:33:26.882 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:33:26.882 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:33:26.882 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 3
+2025-02-02 09:33:26.882 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:33:30.268 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:33:30.269 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: I'm good but I have to go goodbye.
+2025-02-02 09:33:30.269 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:33:30.898 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 0.6283540725708008 seconds
+2025-02-02 09:33:30.898 | INFO     | services.twiliogpt:process_speech:197 - User requested to hang up
+2025-02-02 09:33:31.644 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:33:32.537 | INFO     | services.twiliogpt:call_ended:235 - Call ended
+2025-02-02 09:33:34.110 | INFO     | services.twiliogpt:call_ended:256 - Call summary: Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.
+2025-02-02 09:33:34.111 | INFO     | services.twiliogpt:call_ended:257 - Follow-up topics: nephew's piano concert, back pain, medication adherence
+2025-02-02 09:33:34.111 | INFO     | services.twiliogpt:call_ended:258 - Is emergency: False
+2025-02-02 09:33:34.111 | INFO     | services.twiliogpt:call_ended:259 - Medication updates: {'': '', 'N/A': 'N/A'}
+2025-02-02 09:33:34.111 | INFO     | services.twiliogpt:call_ended:261 - Call summary: Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.
+2025-02-02 09:33:34.126 | INFO     | services.twiliogpt:call_ended:274 - {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 33, 34, 111368), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': 'Freeman, the elderly patient, entered the call but was brief and couldn’t stay long. He mentioned he was feeling good but had to leave suddenly.', 'alert': '', 'follow_up': "nephew's piano concert, back pain, medication adherence"}
+2025-02-02 09:35:00.921 | INFO     | services.twiliogpt:make_call:74 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 09:35:00.921 | INFO     | services.twiliogpt:make_call:78 - Placing call
+2025-02-02 09:35:04.741 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:35:04.741 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:35:04.741 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 1
+2025-02-02 09:35:04.741 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:35:12.302 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:35:12.303 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: Hi, how are you doing?
+2025-02-02 09:35:12.303 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:35:13.006 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 0.7026522159576416 seconds
+2025-02-02 09:35:13.565 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:35:18.562 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:35:18.562 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:35:18.562 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 3
+2025-02-02 09:35:18.562 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:35:25.632 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:35:25.632 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: I feel sick and like, I want to throw up and I have a big headache.
+2025-02-02 09:35:25.632 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:35:26.278 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 0.6455380916595459 seconds
+2025-02-02 09:35:27.578 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:35:39.150 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:35:39.151 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:35:39.151 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 5
+2025-02-02 09:35:39.151 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:35:43.343 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:35:43.344 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: What medications do I have to take today?
+2025-02-02 09:35:43.344 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:35:44.167 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 0.8233067989349365 seconds
+2025-02-02 09:35:44.782 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:35:49.824 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:35:49.824 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:35:49.824 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 7
+2025-02-02 09:35:49.824 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:35:55.646 | INFO     | services.twiliogpt:process_speech:148 - Processing user input
+2025-02-02 09:35:55.647 | WARNING  | services.twiliogpt:process_speech:155 - Speech Result: What's a patrician?
+2025-02-02 09:35:55.647 | INFO     | services.twiliogpt:process_speech:158 - User Input:
+2025-02-02 09:35:59.837 | INFO     | services.twiliogpt:process_speech:190 - GPT response took 4.190431356430054 seconds
+2025-02-02 09:36:01.478 | INFO     | services.twiliogpt:process_speech:214 - AI Response:
+2025-02-02 09:36:16.734 | INFO     | services.twiliogpt:answer_call:115 - answer
+2025-02-02 09:36:16.735 | INFO     | services.twiliogpt:answer_call:121 - Answering call or responding
+2025-02-02 09:36:16.735 | INFO     | services.twiliogpt:answer_call:122 - Conversation length is 9
+2025-02-02 09:36:16.735 | INFO     | services.twiliogpt:answer_call:123 - Patient: Freeman Hudson
+2025-02-02 09:36:22.987 | INFO     | services.twiliogpt:call_ended:235 - Call ended
+2025-02-02 09:36:24.826 | INFO     | services.twiliogpt:call_ended:256 - Call summary: The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.
+2025-02-02 09:36:24.826 | INFO     | services.twiliogpt:call_ended:257 - Follow-up topics: medication compliance,nausea symptoms,headache management,patrician curiosity
+2025-02-02 09:36:24.826 | INFO     | services.twiliogpt:call_ended:258 - Is emergency: True
+2025-02-02 09:36:24.826 | INFO     | services.twiliogpt:call_ended:259 - Medication updates: {'': '', 'N/A': 'N/A', 'sadf': 'not specified'}
+2025-02-02 09:36:24.826 | INFO     | services.twiliogpt:call_ended:261 - Call summary: The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.
+2025-02-02 09:36:24.832 | INFO     | services.twiliogpt:call_ended:274 - {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 36, 24, 826558), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': "The elderly patient, Freeman, reported feeling sick with nausea and a severe headache. The medical assistant advised Freeman to contact his doctor or emergency services if the symptoms were very serious. The medical assistant also checked if Freeman had taken his medication named 'sadf' as prescribed, while explaining the definition of 'patrician' due to a query raised by Freeman.", 'alert': '', 'follow_up': 'medication compliance,nausea symptoms,headache management,patrician curiosity'}

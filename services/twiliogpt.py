@@ -1,8 +1,10 @@
 #twiliogpt.py
-from fastapi import APIRouter, Form, Request, Response, HTTPException
+from fastapi import APIRouter, Form, Request, Response, HTTPException, Depends
 from loguru import logger
 from dotenv import load_dotenv
 import os
+from sqlalchemy.orm import Session
+from sqlalchemy.testing import db
 from twilio.rest import Client
 from twilio.twiml.voice_response import VoiceResponse
 import openai
@@ -10,6 +12,10 @@ from pydantic import BaseModel, Field
 from datetime import datetime
 from typing import List, Optional
 import json
+
+from database import get_db
+from models import CallScheduleStatus
+from routers.routes import create_call_log, CallLogCreate
 
 load_dotenv()
 
@@ -224,7 +230,7 @@ class CallLog(BaseModel):
     is_emergency: bool
     
 @router.api_route("/call_ended", methods=["GET", "POST"])
-def call_ended():
+def call_ended(db: Session = Depends(get_db)):
     # Once the call ends, prompt ChatGPT to generate a short summary of the call for the 'response' key of the db
     logger.info("Call ended")
     if len(conversation) > 1:
@@ -251,7 +257,21 @@ def call_ended():
         logger.info("Follow-up topics: " + str(output.follow_up_topics))
         logger.info("Is emergency: " + str(output.is_emergency))
         logger.info("Medication updates: " + str(medication_updates))
-        
+        output = gpt_response.choices[0].message.parsed
+        logger.info("Call summary: " + output.summary)
+        # Build call log payload
+        call_log_data = {
+            "patient_id": patient_data.get("patient_id", 1),  # or use the correct patient_id
+            "call_time": datetime.utcnow(),
+            "call_status": CallScheduleStatus.pending,  # or adjust based on output
+            "transcription": "",  # set if you have transcription text
+            "summary": output.summary,
+            "alert": "",  # set if needed
+            "follow_up": output.follow_up_topics,
+        }
+        new_log = create_call_log(CallLogCreate(**call_log_data), db)
+
+        logger.info(call_log_data)
         conversation.clear()
     
     return "Summary completed"

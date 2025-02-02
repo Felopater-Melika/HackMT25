@@ -1,0 +1,42 @@
+2025-02-02T09:24:25.529131-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T09:24:25.529436-0600 INFO Placing call
+2025-02-02T09:24:39.149327-0600 INFO answer
+2025-02-02T09:24:39.149537-0600 INFO Answering call or responding
+2025-02-02T09:24:39.149622-0600 INFO Conversation length is 1
+2025-02-02T09:24:39.149699-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:24:47.124080-0600 INFO Processing user input
+2025-02-02T09:24:47.124886-0600 WARNING Speech Result: Hello.
+2025-02-02T09:24:47.124999-0600 INFO User Input:
+2025-02-02T09:24:48.272386-0600 INFO GPT response took 1.147289514541626 seconds
+2025-02-02T09:24:48.942427-0600 INFO AI Response:
+2025-02-02T09:24:53.661876-0600 INFO answer
+2025-02-02T09:24:53.662094-0600 INFO Answering call or responding
+2025-02-02T09:24:53.662169-0600 INFO Conversation length is 3
+2025-02-02T09:24:53.662232-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:24:57.412373-0600 INFO Processing user input
+2025-02-02T09:24:57.412974-0600 WARNING Speech Result: I'm doing pretty good.
+2025-02-02T09:24:57.413094-0600 INFO User Input:
+2025-02-02T09:24:58.397756-0600 INFO GPT response took 0.9845485687255859 seconds
+2025-02-02T09:24:58.917962-0600 INFO AI Response:
+2025-02-02T09:25:03.109112-0600 INFO answer
+2025-02-02T09:25:03.109328-0600 INFO Answering call or responding
+2025-02-02T09:25:03.109435-0600 INFO Conversation length is 5
+2025-02-02T09:25:03.109584-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:25:09.234085-0600 INFO Call ended
+2025-02-02T09:25:11.002360-0600 INFO Call summary: The medical assistant checks in with the elderly patient, Freeman, confirming they are feeling good and initiating a friendly chat about Freeman's nephew's piano concert. The assistant has not yet gotten to the topics of medications or any specific health concerns.
+2025-02-02T09:25:11.002525-0600 INFO Follow-up topics: piano concert feedback, medication adherence, any health concerns, back pain status
+2025-02-02T09:25:11.002606-0600 INFO Is emergency: False
+2025-02-02T09:25:11.002678-0600 INFO Medication updates: {'': 'not mentioned', 'sadf': 'n/a'}
+2025-02-02T09:25:11.002766-0600 INFO Call summary: The medical assistant checks in with the elderly patient, Freeman, confirming they are feeling good and initiating a friendly chat about Freeman's nephew's piano concert. The assistant has not yet gotten to the topics of medications or any specific health concerns.
+2025-02-02T09:27:01.451661-0600 INFO {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02T09:27:01.451925-0600 INFO Placing call
+2025-02-02T09:27:25.286757-0600 INFO answer
+2025-02-02T09:27:25.286976-0600 INFO Answering call or responding
+2025-02-02T09:27:25.287073-0600 INFO Conversation length is 6
+2025-02-02T09:27:25.287159-0600 INFO Patient: Freeman Hudson
+2025-02-02T09:27:31.507949-0600 INFO Call ended
+2025-02-02T09:27:33.319451-0600 INFO Call summary: The medical assistant called Freeman, an elderly patient, to check up on his health and medication adherence. Freeman mentioned feeling pretty good, and the assistant inquired about his nephew's recent piano concert. The assistant didn't detect any immediate health emergencies or serious concerns from Freeman.
+2025-02-02T09:27:33.319630-0600 INFO Follow-up topics: nephew's piano progress, back pain updates, medication adherence discussion
+2025-02-02T09:27:33.319699-0600 INFO Is emergency: False
+2025-02-02T09:27:33.319763-0600 INFO Medication updates: {'': 'not mentioned', 'sadf': 'n/a'}
+2025-02-02T09:27:33.319823-0600 INFO Call summary: The medical assistant called Freeman, an elderly patient, to check up on his health and medication adherence. Freeman mentioned feeling pretty good, and the assistant inquired about his nephew's recent piano concert. The assistant didn't detect any immediate health emergencies or serious concerns from Freeman.

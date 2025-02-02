@@ -1,0 +1,31 @@
+2025-02-02 09:29:00.201 | INFO     | services.twiliogpt:make_call:72 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 09:29:00.202 | INFO     | services.twiliogpt:make_call:76 - Placing call
+2025-02-02 09:29:03.351 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:29:03.351 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:29:03.351 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 1
+2025-02-02 09:29:03.351 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:29:11.136 | INFO     | services.twiliogpt:process_speech:146 - Processing user input
+2025-02-02 09:29:11.137 | WARNING  | services.twiliogpt:process_speech:153 - Speech Result: Hello, how are you doing?
+2025-02-02 09:29:11.137 | INFO     | services.twiliogpt:process_speech:156 - User Input:
+2025-02-02 09:29:12.171 | INFO     | services.twiliogpt:process_speech:188 - GPT response took 1.033987045288086 seconds
+2025-02-02 09:29:12.978 | INFO     | services.twiliogpt:process_speech:212 - AI Response:
+2025-02-02 09:29:20.549 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:29:20.549 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:29:20.549 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 3
+2025-02-02 09:29:20.549 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:29:23.887 | INFO     | services.twiliogpt:process_speech:146 - Processing user input
+2025-02-02 09:29:23.888 | WARNING  | services.twiliogpt:process_speech:153 - Speech Result: I'm feeling pretty good today.
+2025-02-02 09:29:23.888 | INFO     | services.twiliogpt:process_speech:156 - User Input:
+2025-02-02 09:29:24.545 | INFO     | services.twiliogpt:process_speech:188 - GPT response took 0.6571905612945557 seconds
+2025-02-02 09:29:25.262 | INFO     | services.twiliogpt:process_speech:212 - AI Response:
+2025-02-02 09:29:31.304 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:29:31.304 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:29:31.305 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 5
+2025-02-02 09:29:31.305 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:29:34.686 | INFO     | services.twiliogpt:call_ended:233 - Call ended
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:254 - Call summary: The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:255 - Follow-up topics: back pain,medication adherence,activity level,future medical appointments
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:256 - Is emergency: False
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:257 - Medication updates: {'sadf': 'N/A'}
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:259 - Call summary: The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.
+2025-02-02 09:29:36.681 | INFO     | services.twiliogpt:call_ended:272 - {'patient_id': 1, 'call_time': datetime.datetime(2025, 2, 2, 15, 29, 36, 681804), 'call_status': <CallScheduleStatus.pending: 'pending'>, 'transcription': '', 'summary': "The conversation was a routine check-in between a medical assistant and an elderly patient named Freeman. The medical assistant confirmed Freeman was feeling well and inquired about his personal life by asking about his nephew's piano concert. Freeman reported feeling good and shared details about attending the concert.", 'alert': '', 'follow_up': 'back pain,medication adherence,activity level,future medical appointments'}

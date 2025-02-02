@@ -1,0 +1,42 @@
+2025-02-02 09:24:25.529 | INFO     | services.twiliogpt:make_call:72 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 09:24:25.529 | INFO     | services.twiliogpt:make_call:76 - Placing call
+2025-02-02 09:24:39.149 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:24:39.149 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:24:39.149 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 1
+2025-02-02 09:24:39.149 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:24:47.124 | INFO     | services.twiliogpt:process_speech:146 - Processing user input
+2025-02-02 09:24:47.124 | WARNING  | services.twiliogpt:process_speech:153 - Speech Result: Hello.
+2025-02-02 09:24:47.124 | INFO     | services.twiliogpt:process_speech:156 - User Input:
+2025-02-02 09:24:48.272 | INFO     | services.twiliogpt:process_speech:188 - GPT response took 1.147289514541626 seconds
+2025-02-02 09:24:48.942 | INFO     | services.twiliogpt:process_speech:212 - AI Response:
+2025-02-02 09:24:53.661 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:24:53.662 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:24:53.662 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 3
+2025-02-02 09:24:53.662 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:24:57.412 | INFO     | services.twiliogpt:process_speech:146 - Processing user input
+2025-02-02 09:24:57.412 | WARNING  | services.twiliogpt:process_speech:153 - Speech Result: I'm doing pretty good.
+2025-02-02 09:24:57.413 | INFO     | services.twiliogpt:process_speech:156 - User Input:
+2025-02-02 09:24:58.397 | INFO     | services.twiliogpt:process_speech:188 - GPT response took 0.9845485687255859 seconds
+2025-02-02 09:24:58.917 | INFO     | services.twiliogpt:process_speech:212 - AI Response:
+2025-02-02 09:25:03.109 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:25:03.109 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:25:03.109 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 5
+2025-02-02 09:25:03.109 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:25:09.234 | INFO     | services.twiliogpt:call_ended:233 - Call ended
+2025-02-02 09:25:11.002 | INFO     | services.twiliogpt:call_ended:254 - Call summary: The medical assistant checks in with the elderly patient, Freeman, confirming they are feeling good and initiating a friendly chat about Freeman's nephew's piano concert. The assistant has not yet gotten to the topics of medications or any specific health concerns.
+2025-02-02 09:25:11.002 | INFO     | services.twiliogpt:call_ended:255 - Follow-up topics: piano concert feedback, medication adherence, any health concerns, back pain status
+2025-02-02 09:25:11.002 | INFO     | services.twiliogpt:call_ended:256 - Is emergency: False
+2025-02-02 09:25:11.002 | INFO     | services.twiliogpt:call_ended:257 - Medication updates: {'': 'not mentioned', 'sadf': 'n/a'}
+2025-02-02 09:25:11.002 | INFO     | services.twiliogpt:call_ended:259 - Call summary: The medical assistant checks in with the elderly patient, Freeman, confirming they are feeling good and initiating a friendly chat about Freeman's nephew's piano concert. The assistant has not yet gotten to the topics of medications or any specific health concerns.
+2025-02-02 09:27:01.451 | INFO     | services.twiliogpt:make_call:72 - {'first_name': 'Freeman', 'last_name': 'Hudson', 'follow_up_topics': "Nephew's piano concert, back pain, medication refills", 'phone_number': '304-720-0065 x83508', 'caregiver_number': 'N/A', 'prescriptions': {'ids': [1], 'names': ['sadf']}, 'bio': 'Cena bene consequuntur comminor vorago beneficium labore.', 'hour': '15', 'minute': '15'}
+2025-02-02 09:27:01.451 | INFO     | services.twiliogpt:make_call:76 - Placing call
+2025-02-02 09:27:25.286 | INFO     | services.twiliogpt:answer_call:113 - answer
+2025-02-02 09:27:25.286 | INFO     | services.twiliogpt:answer_call:119 - Answering call or responding
+2025-02-02 09:27:25.287 | INFO     | services.twiliogpt:answer_call:120 - Conversation length is 6
+2025-02-02 09:27:25.287 | INFO     | services.twiliogpt:answer_call:121 - Patient: Freeman Hudson
+2025-02-02 09:27:31.507 | INFO     | services.twiliogpt:call_ended:233 - Call ended
+2025-02-02 09:27:33.319 | INFO     | services.twiliogpt:call_ended:254 - Call summary: The medical assistant called Freeman, an elderly patient, to check up on his health and medication adherence. Freeman mentioned feeling pretty good, and the assistant inquired about his nephew's recent piano concert. The assistant didn't detect any immediate health emergencies or serious concerns from Freeman.
+2025-02-02 09:27:33.319 | INFO     | services.twiliogpt:call_ended:255 - Follow-up topics: nephew's piano progress, back pain updates, medication adherence discussion
+2025-02-02 09:27:33.319 | INFO     | services.twiliogpt:call_ended:256 - Is emergency: False
+2025-02-02 09:27:33.319 | INFO     | services.twiliogpt:call_ended:257 - Medication updates: {'': 'not mentioned', 'sadf': 'n/a'}
+2025-02-02 09:27:33.319 | INFO     | services.twiliogpt:call_ended:259 - Call summary: The medical assistant called Freeman, an elderly patient, to check up on his health and medication adherence. Freeman mentioned feeling pretty good, and the assistant inquired about his nephew's recent piano concert. The assistant didn't detect any immediate health emergencies or serious concerns from Freeman.
