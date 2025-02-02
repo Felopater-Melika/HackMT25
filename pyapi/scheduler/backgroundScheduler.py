@@ -1,92 +1,48 @@
 from apscheduler.schedulers.background import BackgroundScheduler
 import time
-import sqlite3
 import requests
-import json
-
-#init sqlite db 
-conn = sqlite3.connect('DB_NAME')
-cursor = conn.cursor()
+from pydantic import BaseModel
 
 
-# Pass to server as patient data
-def bot_request():
-    patient_info = conn.execute(f"""
-    WITH todays_calls AS (
-        SELECT 
-            id AS call_id,
-            patient_id,
-            call_datetime
-        FROM schedule
-        WHERE DATE(call_datetime) = DATE('now')
-        ORDER BY call_datetime ASC
-    )
-    SELECT 
-        tc.call_id,
-        tc.patient_id,
-        tc.call_datetime,
-        tc.follow_up,
-        GROUP_CONCAT(DISTINCT pr.id) AS prescription_ids,  -- Multiple prescriptions?
-        p.id AS patient_id,
-        p.first_name,
-        p.last_name,
-        p.phone_number,
-        p.caregivers,
-        pres.name AS prescription_name,
-        med.status AS medication_status
-    FROM todays_calls AS tc
-    JOIN patients AS p ON tc.patient_id = p.id
-    JOIN prescriptions AS pr ON tc.patient_id = pr.patient_id
-    JOIN medications AS med ON tc.patient_id = med.patient_id
-    GROUP BY tc.call_id, p.id, pres.name, med.status;
-    """).fetchall()
-    
-    dummy_values = {
-        "id": 1,
-        "patient_id": 1,
-        "call_datetime": "2023-10-05 10:00:00",
-        "follow_up": "Nephew's piano concert, back pain, medication refills",
-        "prescription_ids": "1,2,3",
-        "patient_id": 1,
-        "first_name": "John",
-        "last_name": "Doe",
-        "phone_number": "+1234567890",
-        "caregivers": "Jane Doe",
-        "prescription_name": "Aspirin",
-        "medication_status": "On Track"
-    }
-    
+class CallRequest(BaseModel):
+    first_name: str
+    last_name: str
+    follow_up_topics: str
+    phone_number: str
+    caregiver_number: str
+    prescriptions: dict
+    bio: str
+    hour: str
+    minute: str
+
+def bot_request(call_schedule: CallRequest):
+    # Call API to schedule call
+    url = "http://127.0.0.1:8000/make_call"
     headers = {"Content-Type": "application/json"}
-    
-    url = "http://localhost:8000/request"
-    
-    response = requests.post(url, json=json.dumps(dummy_values), headers=headers)
-    return response.json()
+    response = requests.post(url, headers=headers, data=call_schedule.model_dump_json())
     
 
-def get_todays_schedule_info():
-    todays_info = cursor.execute("""
-    SELECT 
-        id,
-        patient_id
-        call_datetime
-    FROM schedule
-    WHERE DATE(call_datetime) = DATE('now') LIMIT 1;
-    """)
+def schedule_call(call_schedule: CallRequest):
+    hour, minute = call_schedule.hour, call_schedule.minute
     
-    return todays_info.fetchall()
-
-def main():
     scheduler = BackgroundScheduler()
-    id, patient_id, call_datetime = get_todays_schedule_info()
-    
-    hour = call_datetime.hour
-    minute = call_datetime.minute
 
-    scheduler.add_job(bot_request, 'cron', hour=hour, minute=minute)
+    scheduler.add_job(bot_request, 'cron', hour=hour, minute=minute, args=[call_schedule])
     scheduler.start()
 
-main()
+
+dummy_data = CallRequest(
+        first_name="John",
+        last_name="Doe",
+        follow_up_topics="Nephew's piano concert, back pain, medication refills",
+        phone_number="+16155856532",
+        caregiver_number="+1234567890",
+        prescriptions={"levothyroxine": "taken", "ibuprofen": "not", "amlodipine" : "delayed"},
+        bio="John is a 65 year old man who loves football. He has diabetes and high blood pressure.",
+        hour="1",
+        minute="25",
+    )
+schedule_call(dummy_data)
 
 while True:
     time.sleep(1)

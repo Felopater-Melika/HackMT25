@@ -1,13 +1,14 @@
 #twiliogpt.py
-from fastapi import APIRouter, Form, Request, Response
+from fastapi import APIRouter, Form, Request, Response, HTTPException
 from loguru import logger
 from dotenv import load_dotenv
 import os
 from twilio.rest import Client
 from twilio.twiml.voice_response import VoiceResponse
 import openai
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from datetime import datetime
+from typing import List, Optional
 import json
 
 load_dotenv()
@@ -21,7 +22,7 @@ openai_client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 # array to store messages
 conversation = []
 
-follow_up_topics = ["Nephew's piano concert, back pain, medication refills"]
+follow_up_topics = "Nephew's piano concert, back pain, medication refills"
 
 # "name" : "status"
 medications = {
@@ -40,26 +41,31 @@ TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
 
 NGROK_URL = os.environ["NGROK_URL"]
 
-# hardcoded test data
-# patient_contact_info = os.environ["PATIENT_PHONE_NUMBER"]
-# patient_first_name = "John"
-
 patient_data = None
 
 # init twilio client
 twilio_client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-@router.post("/request")
-async def request(request: Request):
-    global patient_data
-    json_data = await request.json()
-    patient_data = json.loads(json_data)
-    logger.info("Request received")
-    # Route to make_call
-    return make_call()
+class CallRequest(BaseModel):
+    first_name: str
+    last_name: str
+    follow_up_topics: str
+    phone_number: str
+    caregiver_number: str
+    prescriptions: dict
+    bio: str
+    hour: str
+    minute: str
+ 
 
-@router.get("/make_call")
-def make_call():
+@router.post("/make_call")
+def make_call(call_request: CallRequest):
+    global patient_data
+    
+    patient_data = call_request.model_dump()
+    
+    patient_data["follow_up_topics"] = "Nephew's piano concert, back pain, medication refills"
+        
     logger.info("Placing call")
     
     prompt = f"""
@@ -71,7 +77,7 @@ def make_call():
     Do not offer to call emergency services for them.
     Ask them one-by-one about their medications after checking in with the patient's personal life,
     and if they are taking them as prescribed.
-    Medications: {patient_data["prescription_name"]}
+    Medications: {patient_data["prescriptions"]}
     """
     
     if follow_up_topics:
