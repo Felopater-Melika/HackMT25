@@ -32,16 +32,16 @@ def schedule_call(call_schedule: CallRequest):
 
 
 dummy_data = CallRequest(
-        first_name="John",
-        last_name="Doe",
-        follow_up_topics="Nephew's piano concert, back pain, medication refills",
-        phone_number="+16155856532",
-        caregiver_number="lilchwis@gmail.com",
-        prescriptions={"levothyroxine": "taken", "ibuprofen": "not", "amlodipine" : "delayed"},
-        bio="John is a 65 year old man who loves football. He has diabetes and high blood pressure.",
-        hour="2",
-        minute="38",
-    )
+    first_name="John",
+    last_name="Doe",
+    follow_up_topics="Nephew's piano concert, back pain, medication refills",
+    phone_number="+16159240230",
+    caregiver_number="drewh6472@gmail.com",
+    prescriptions={"levothyroxine": "taken", "ibuprofen": "not", "amlodipine" : "delayed"},
+    bio="John is a 65 year old man who loves football. He has diabetes and high blood pressure.",
+    hour="4",
+    minute="6",
+)
 schedule_call(dummy_data)
 
 while True:

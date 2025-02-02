@@ -38,6 +38,7 @@ medication_updates = {}
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
 TWILIO_PHONE_NUMBER = os.environ["TWILIO_PHONE_NUMBER"]
+AI_VOICE = os.environ["AI_VOICE"]
 
 NGROK_URL = os.environ["NGROK_URL"]
 
@@ -70,11 +71,11 @@ def make_call(call_request: CallRequest):
     
     prompt = f"""
     You are checking in on an elderly patient.
+
     Their name is {[patient_data["first_name"]]}. Ask to make sure they are feeling healthy and well, 
     and ask whether they've taken their medications today. Keep your answers reasonably short.
     If at any point it seems like they have a serious concern, 
-    remimd them they should call their doctor or 911 (say as nine-one-one) for emergencies.
-    Do not offer to call emergency services for them.
+    remimd them they should call their doctor or 9-1-1 for emergencies, but do not call emergency services.
     Ask them one-by-one about their medications after checking in with the patient's personal life,
     and if they are taking them as prescribed.
     Medications: {patient_data["prescriptions"]}
@@ -111,7 +112,7 @@ def answer_call():
     
     # if len(conversation) == 1, this is the first TTS of the call, therefore it should greet the user
     if conv_len == 1:
-        response.say("Hi " + patient_data["first_name"] + "! This is Blue Buddy calling to check in on you!", voice="alice")
+        response.say("Hello " + patient_data["first_name"] + "! This is Blue Buddy calling to check in!", voice=AI_VOICE)
         
     response.gather(
         input="speech",
@@ -182,7 +183,7 @@ async def process_speech(request: Request):
     # if "hang up" is included in the speech_result, exit the function/end the call
     if is_hang_up:
         logger.info("User requested to hang up")
-        response.say("Goodbye")
+        response.say("Goodbye", voice=AI_VOICE)
         response.hangup()
         # route to call_ended
         response.redirect("/call_ended")
@@ -200,7 +201,7 @@ async def process_speech(request: Request):
         conversation.append({"role": "assistant", "content": assistant_reply})
         logger.info("AI Response:", assistant_reply)
 
-        response.say(assistant_reply)
+        response.say(assistant_reply, voice=AI_VOICE)
 
     except Exception as e:
         logger.info("OpenAI API Error:", e)
