@@ -1,6 +1,6 @@
 from database import Base, engine
 
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Enum, Float, Table
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text, Enum, Float
 import datetime
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
@@ -37,7 +37,7 @@ class Caregiver(Base):
     last_name = Column(String(100), nullable=False)
     phone_number = Column(String(20), nullable=False)
     email = Column(String(255), unique=True, nullable=False)
-    hashed_password = Column(String(255), nullable=False)
+    password = Column(String(255), nullable=False)
     #created_at = Column(DateTime, default=datetime.datetime.utcnow, nullable=False)
     #updated_at = Column(DateTime, default=datetime.datetime.utcnow, onupdate=datetime.datetime.utcnow)
 

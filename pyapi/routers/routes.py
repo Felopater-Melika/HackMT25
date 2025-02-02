@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
-from passlib.hash import bcrypt
 from pydantic import BaseModel
 from database import get_db
 from datetime import datetime
@@ -78,7 +77,6 @@ def register_caregiver(caregiver: CaregiverCreate, db: Session = Depends(get_db)
     if caregiver.password != caregiver.confirm_password:
         raise HTTPException(status_code=400, detail="Passwords do not match.")
 
-    hashed_password = bcrypt.hash(caregiver.password)
     db_caregiver = db.query(Caregiver).filter(
         (Caregiver.email == caregiver.email)
     ).first()
@@ -102,7 +100,7 @@ def register_caregiver(caregiver: CaregiverCreate, db: Session = Depends(get_db)
         last_name=caregiver.last_name,
         email=caregiver.email,
         phone_number=caregiver.phone_number,
-        hashed_password=hashed_password,
+        password=caregiver.password,
         patient_id=patient_id
     )
     db.add(new_caregiver)
@@ -213,7 +211,7 @@ def create_call_log(call_log: CallLogCreate, db: Session = Depends(get_db)):
 @router.post("/login/")
 def login_caregiver(caregiver: CaregiverLogin, db: Session = Depends(get_db)):
     db_caregiver = db.query(Caregiver).filter(Caregiver.email == caregiver.email).first()
-    if not db_caregiver or not bcrypt.verify(caregiver.password, db_caregiver.hashed_password):
+    if not db_caregiver or db_caregiver.password != caregiver.password:
         raise HTTPException(status_code=401, detail="Invalid credentials.")
     
     return db_caregiver
