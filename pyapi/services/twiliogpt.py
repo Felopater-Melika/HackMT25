@@ -21,7 +21,18 @@ openai_client = openai.OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 # array to store messages
 conversation = []
 
-follow_up_topics = []
+follow_up_topics = ["Nephew's piano concert, back pain, medication refills"]
+
+# "name" : "status"
+medications = {
+    "levothyroxine": "taken",
+    "ibuprofen": "not",
+    "amlodipine" : "delayed",
+    "trazodone" : "taking later",
+    "metformin" : "need refill",
+}
+
+medication_updates = {}
 
 TWILIO_ACCOUNT_SID = os.environ["TWILIO_ACCOUNT_SID"]
 TWILIO_AUTH_TOKEN = os.environ["TWILIO_AUTH_TOKEN"]
@@ -46,14 +57,17 @@ def make_call():
     Their name is {patient_first_name}. Ask to make sure they are feeling healthy and well, 
     and ask whether they've taken their medications today. Keep your answers reasonably short.
     If at any point it seems like they have a serious concern, 
-    remimd them they should call their doctor or 911 (nine-one-one) for emergencies.
+    remimd them they should call their doctor or 911 (say as nine-one-one) for emergencies.
     Do not offer to call emergency services for them.
+    Ask them one-by-one about their medications after checking in with the patient's personal life,
+    and if they are taking them as prescribed.
+    Medications: {medications}
     """
     
     if follow_up_topics:
         prompt += f"""
-        Here is a list of follow up topics from the previous phone call (if available).
-        Spend some time discussing these briefly to be more personable:
+        Here is a list of follow up topics from the previous phone call.
+        Spend some time discussing these briefly to be more personable at the beginning of the call:
         {follow_up_topics}"""
     
     conversation.append({"role": "system", "content": prompt})
@@ -93,8 +107,10 @@ def answer_call():
     print(str(response))
     return Response(content=str(response), media_type="application/xml")
 
-class HangUp(BaseModel):
+class ProcessResponse(BaseModel):
     hang_up: bool
+    medication: str
+    status: str    
 
 @router.post("/process_speech")
 async def process_speech(request: Request):
@@ -119,17 +135,26 @@ async def process_speech(request: Request):
     try:
 
         prompt = f"""
-        Based on the following conversation, determine if the user explicitly requests
-        to end the call and if it is appropriate to hang up here. Return 'true' or 'false' only.
+        Based on the following conversation, determine the following:
+        1) if the user explicitly requests to end the call and if it is appropriate to hang up here. 
+        Return 'true' or 'false' only.
+        2) if the user is asked about the medicaiton they are taking, output which one medication they are 
+        referring to and the status (taken/not taking/delayed/taking later/need refill).
+        
         Conversation: 
         {conversation}
         """
         gpt_response = openai_client.beta.chat.completions.parse(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
-            response_format=HangUp
+            response_format=ProcessResponse
         )
-        is_hang_up = gpt_response.choices[0].message.parsed.hang_up
+        output = gpt_response.choices[0].message.parsed
+        is_hang_up = output.hang_up
+        
+        medication_name = output.medication
+        medication_status = output.status
+        medication_updates[medication_name] = medication_status
         
         print("GPT response took " + str(time.time() - start_time) + " seconds")
     except Exception as e:   
@@ -170,7 +195,7 @@ async def process_speech(request: Request):
 
 class CallLog(BaseModel):
     summary: str
-    follow_up_topics: list[str]
+    follow_up_topics: str
     is_emergency: bool
     
 @router.api_route("/call_ended", methods=["GET", "POST"])
@@ -181,25 +206,26 @@ def call_ended():
         
         prompt = f"""
         Please briefly summarize the following conversation between a medical assistant and an elderly patient,
-        and provide a short list of follow-up keyword topics that the medical assistant should discuss with the patient
+        and provide a short comma separated list of follow-up keyword topics that the medical assistant should discuss with the patient
         in their next phone call. If the patient has an emergency concern (extreme pain, suicide, refusal to take medicine,
         falls, heart attack, etc.), please note that as true/false and the primary healthcare provider will be contacted immediately.
         Conversation:
         {conversation}
         """
         
-        response = openai_client.beta.chat.completions.parse(
+        gpt_response = openai_client.beta.chat.completions.parse(
             model="gpt-4o",
             messages=[{"role": "user", "content": prompt}],
             response_format=CallLog
         )
         
-        output = response.choices[0].message.parsed
+        output = gpt_response.choices[0].message.parsed
 
         
         logger.info("Call summary: " + output.summary)
         logger.info("Follow-up topics: " + str(output.follow_up_topics))
         logger.info("Is emergency: " + str(output.is_emergency))
+        logger.info("Medication updates: " + str(medication_updates))
         
         conversation.clear()
     
