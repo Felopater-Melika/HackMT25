@@ -1,0 +1,51 @@
+2025-02-01T17:49:43.949464-0600 INFO Placing call
+2025-02-01T17:49:51.233684-0600 INFO Placing call
+2025-02-01T17:49:58.476957-0600 INFO Call ended
+2025-02-01T17:50:01.370358-0600 INFO answer
+2025-02-01T17:50:01.370856-0600 INFO Answering call or responding
+2025-02-01T17:50:01.371031-0600 INFO Conversation length is 2
+2025-02-01T17:50:01.371199-0600 INFO Patient: John
+2025-02-01T17:50:07.562928-0600 INFO Call ended
+2025-02-01T17:50:08.741712-0600 INFO Call summary: John mentioned that he is generally feeling well, but there is a concern regarding his medication regimen. He has taken levothyroxine as prescribed, chose not to take ibuprofen, delayed taking amlodipine, plans to take trazodone later, and indicated he needs a refill for metformin.
+2025-02-01T17:50:08.741979-0600 INFO Follow-up topics: ibuprofen usage,amlodipine timing,metformin refill,trazodone schedule,medication adherence
+2025-02-01T17:50:08.742126-0600 INFO Is emergency: False
+2025-02-01T17:50:09.913665-0600 INFO Call summary: John reported feeling generally well today but has not taken all of his medications as prescribed. He took his Levothyroxine and plans to take Trazodone later today. However, he did not take Ibuprofen, delayed Amlodipine, and needs a refill for Metformin. The medical assistant reminded John to stay vigilant about taking his medications and to contact his healthcare provider or 911 in the case of an emergency. No emergency concerns were raised during the call.
+2025-02-01T17:50:09.913932-0600 INFO Follow-up topics: medication adherence, metformin refill, pain management, blood pressure management, follow-up appointment
+2025-02-01T17:50:09.914092-0600 INFO Is emergency: False
+2025-02-01T17:50:16.398710-0600 INFO Placing call
+2025-02-01T17:50:23.078528-0600 INFO answer
+2025-02-01T17:50:23.079272-0600 INFO Answering call or responding
+2025-02-01T17:50:23.079520-0600 INFO Conversation length is 1
+2025-02-01T17:50:23.079725-0600 INFO Patient: John
+2025-02-01T17:50:30.888694-0600 INFO Processing user input
+2025-02-01T17:50:30.890350-0600 WARNING Speech Result: Blue buddy.
+2025-02-01T17:50:30.890582-0600 INFO User Input:
+2025-02-01T17:50:37.283294-0600 INFO AI Response:
+2025-02-01T17:50:42.416311-0600 INFO answer
+2025-02-01T17:50:42.416567-0600 INFO Answering call or responding
+2025-02-01T17:50:42.416724-0600 INFO Conversation length is 3
+2025-02-01T17:50:42.416871-0600 INFO Patient: John
+2025-02-01T17:50:47.061455-0600 INFO Processing user input
+2025-02-01T17:50:47.062551-0600 WARNING Speech Result: I'm feeling alright.
+2025-02-01T17:50:47.062775-0600 INFO User Input:
+2025-02-01T17:50:50.215484-0600 INFO AI Response:
+2025-02-01T17:51:00.286687-0600 INFO answer
+2025-02-01T17:51:00.287890-0600 INFO Answering call or responding
+2025-02-01T17:51:00.288280-0600 INFO Conversation length is 5
+2025-02-01T17:51:00.288575-0600 INFO Patient: John
+2025-02-01T17:51:06.517814-0600 INFO Processing user input
+2025-02-01T17:51:06.518822-0600 WARNING Speech Result: That's so annoying.
+2025-02-01T17:51:06.519047-0600 INFO User Input:
+2025-02-01T17:51:09.091061-0600 INFO AI Response:
+2025-02-01T17:51:17.399498-0600 INFO answer
+2025-02-01T17:51:17.399956-0600 INFO Answering call or responding
+2025-02-01T17:51:17.400158-0600 INFO Conversation length is 7
+2025-02-01T17:51:17.400343-0600 INFO Patient: John
+2025-02-01T17:51:19.262349-0600 INFO Processing user input
+2025-02-01T17:51:19.263114-0600 WARNING Speech Result: yes, I
+2025-02-01T17:51:19.263378-0600 INFO User Input:
+2025-02-01T17:51:21.175372-0600 INFO AI Response:
+2025-02-01T17:51:21.176314-0600 INFO Call ended
+2025-02-01T17:51:22.884586-0600 INFO Call summary: The medical assistant conducted a check-in call with John, an elderly patient, to verify his overall health and medication adherence. John expressed mild annoyance but reported taking levothyroxine, though he hasn't taken ibuprofen yet. The medical assistant remained empathetic and reassuring throughout the conversation.
+2025-02-01T17:51:22.884827-0600 INFO Follow-up topics: medication adherence,refill prescription for metformin,manage medication side effects,schedule next appointment,importance of ibuprofen
+2025-02-01T17:51:22.884970-0600 INFO Is emergency: False

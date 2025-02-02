@@ -1,0 +1,51 @@
+2025-02-01 17:49:43.949 | INFO     | services.twiliogpt:make_call:51 - Placing call
+2025-02-01 17:49:51.233 | INFO     | services.twiliogpt:make_call:51 - Placing call
+2025-02-01 17:49:58.476 | INFO     | services.twiliogpt:call_ended:195 - Call ended
+2025-02-01 17:50:01.370 | INFO     | services.twiliogpt:answer_call:83 - answer
+2025-02-01 17:50:01.370 | INFO     | services.twiliogpt:answer_call:89 - Answering call or responding
+2025-02-01 17:50:01.371 | INFO     | services.twiliogpt:answer_call:90 - Conversation length is 2
+2025-02-01 17:50:01.371 | INFO     | services.twiliogpt:answer_call:91 - Patient: John
+2025-02-01 17:50:07.562 | INFO     | services.twiliogpt:call_ended:195 - Call ended
+2025-02-01 17:50:08.741 | INFO     | services.twiliogpt:call_ended:216 - Call summary: John mentioned that he is generally feeling well, but there is a concern regarding his medication regimen. He has taken levothyroxine as prescribed, chose not to take ibuprofen, delayed taking amlodipine, plans to take trazodone later, and indicated he needs a refill for metformin.
+2025-02-01 17:50:08.741 | INFO     | services.twiliogpt:call_ended:217 - Follow-up topics: ibuprofen usage,amlodipine timing,metformin refill,trazodone schedule,medication adherence
+2025-02-01 17:50:08.742 | INFO     | services.twiliogpt:call_ended:218 - Is emergency: False
+2025-02-01 17:50:09.913 | INFO     | services.twiliogpt:call_ended:216 - Call summary: John reported feeling generally well today but has not taken all of his medications as prescribed. He took his Levothyroxine and plans to take Trazodone later today. However, he did not take Ibuprofen, delayed Amlodipine, and needs a refill for Metformin. The medical assistant reminded John to stay vigilant about taking his medications and to contact his healthcare provider or 911 in the case of an emergency. No emergency concerns were raised during the call.
+2025-02-01 17:50:09.913 | INFO     | services.twiliogpt:call_ended:217 - Follow-up topics: medication adherence, metformin refill, pain management, blood pressure management, follow-up appointment
+2025-02-01 17:50:09.914 | INFO     | services.twiliogpt:call_ended:218 - Is emergency: False
+2025-02-01 17:50:16.398 | INFO     | services.twiliogpt:make_call:51 - Placing call
+2025-02-01 17:50:23.078 | INFO     | services.twiliogpt:answer_call:83 - answer
+2025-02-01 17:50:23.079 | INFO     | services.twiliogpt:answer_call:89 - Answering call or responding
+2025-02-01 17:50:23.079 | INFO     | services.twiliogpt:answer_call:90 - Conversation length is 1
+2025-02-01 17:50:23.079 | INFO     | services.twiliogpt:answer_call:91 - Patient: John
+2025-02-01 17:50:30.888 | INFO     | services.twiliogpt:process_speech:114 - Processing user input
+2025-02-01 17:50:30.890 | WARNING  | services.twiliogpt:process_speech:121 - Speech Result: Blue buddy.
+2025-02-01 17:50:30.890 | INFO     | services.twiliogpt:process_speech:124 - User Input:
+2025-02-01 17:50:37.283 | INFO     | services.twiliogpt:process_speech:174 - AI Response:
+2025-02-01 17:50:42.416 | INFO     | services.twiliogpt:answer_call:83 - answer
+2025-02-01 17:50:42.416 | INFO     | services.twiliogpt:answer_call:89 - Answering call or responding
+2025-02-01 17:50:42.416 | INFO     | services.twiliogpt:answer_call:90 - Conversation length is 3
+2025-02-01 17:50:42.416 | INFO     | services.twiliogpt:answer_call:91 - Patient: John
+2025-02-01 17:50:47.061 | INFO     | services.twiliogpt:process_speech:114 - Processing user input
+2025-02-01 17:50:47.062 | WARNING  | services.twiliogpt:process_speech:121 - Speech Result: I'm feeling alright.
+2025-02-01 17:50:47.062 | INFO     | services.twiliogpt:process_speech:124 - User Input:
+2025-02-01 17:50:50.215 | INFO     | services.twiliogpt:process_speech:174 - AI Response:
+2025-02-01 17:51:00.286 | INFO     | services.twiliogpt:answer_call:83 - answer
+2025-02-01 17:51:00.287 | INFO     | services.twiliogpt:answer_call:89 - Answering call or responding
+2025-02-01 17:51:00.288 | INFO     | services.twiliogpt:answer_call:90 - Conversation length is 5
+2025-02-01 17:51:00.288 | INFO     | services.twiliogpt:answer_call:91 - Patient: John
+2025-02-01 17:51:06.517 | INFO     | services.twiliogpt:process_speech:114 - Processing user input
+2025-02-01 17:51:06.518 | WARNING  | services.twiliogpt:process_speech:121 - Speech Result: That's so annoying.
+2025-02-01 17:51:06.519 | INFO     | services.twiliogpt:process_speech:124 - User Input:
+2025-02-01 17:51:09.091 | INFO     | services.twiliogpt:process_speech:174 - AI Response:
+2025-02-01 17:51:17.399 | INFO     | services.twiliogpt:answer_call:83 - answer
+2025-02-01 17:51:17.399 | INFO     | services.twiliogpt:answer_call:89 - Answering call or responding
+2025-02-01 17:51:17.400 | INFO     | services.twiliogpt:answer_call:90 - Conversation length is 7
+2025-02-01 17:51:17.400 | INFO     | services.twiliogpt:answer_call:91 - Patient: John
+2025-02-01 17:51:19.262 | INFO     | services.twiliogpt:process_speech:114 - Processing user input
+2025-02-01 17:51:19.263 | WARNING  | services.twiliogpt:process_speech:121 - Speech Result: yes, I
+2025-02-01 17:51:19.263 | INFO     | services.twiliogpt:process_speech:124 - User Input:
+2025-02-01 17:51:21.175 | INFO     | services.twiliogpt:process_speech:174 - AI Response:
+2025-02-01 17:51:21.176 | INFO     | services.twiliogpt:call_ended:195 - Call ended
+2025-02-01 17:51:22.884 | INFO     | services.twiliogpt:call_ended:216 - Call summary: The medical assistant conducted a check-in call with John, an elderly patient, to verify his overall health and medication adherence. John expressed mild annoyance but reported taking levothyroxine, though he hasn't taken ibuprofen yet. The medical assistant remained empathetic and reassuring throughout the conversation.
+2025-02-01 17:51:22.884 | INFO     | services.twiliogpt:call_ended:217 - Follow-up topics: medication adherence,refill prescription for metformin,manage medication side effects,schedule next appointment,importance of ibuprofen
+2025-02-01 17:51:22.884 | INFO     | services.twiliogpt:call_ended:218 - Is emergency: False

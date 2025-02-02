@@ -1,0 +1,17 @@
+2025-02-01 16:17:44.527 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:17:45.485 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:17:50.147 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:17:50.147 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:17:50.148 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 2
+2025-02-01 16:17:50.148 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:17:56.478 | INFO     | services.twiliogpt:call_ended:170 - Call ended
+2025-02-01 16:17:58.429 | INFO     | services.twiliogpt:call_ended:191 - Call summary: The medical assistant checked in on John, an elderly patient, to ensure he was feeling well and that he had taken his medications. The conversation was brief and focused on John's general health and medication adherence. John did not mention any serious concerns that require immediate emergency assistance.
+2025-02-01 16:17:58.430 | INFO     | services.twiliogpt:call_ended:192 - Follow-up topics: ['Medication adherence', 'Well-being check', 'Appointment reminders', 'Exercise and mobility', 'Diet and nutrition']
+2025-02-01 16:17:58.430 | INFO     | services.twiliogpt:call_ended:193 - Is emergency: False
+2025-02-01 16:18:00.880 | INFO     | services.twiliogpt:call_ended:170 - Call ended
+2025-02-01 16:18:05.478 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:18:11.936 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:18:11.936 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:18:11.937 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 1
+2025-02-01 16:18:11.937 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:18:22.211 | INFO     | services.twiliogpt:call_ended:170 - Call ended

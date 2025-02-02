@@ -1,0 +1,37 @@
+2025-02-01T16:20:42.316466-0600 INFO Placing call
+2025-02-01T16:20:52.124346-0600 INFO answer
+2025-02-01T16:20:52.124651-0600 INFO Answering call or responding
+2025-02-01T16:20:52.124824-0600 INFO Conversation length is 1
+2025-02-01T16:20:52.124982-0600 INFO Patient: John
+2025-02-01T16:20:59.976461-0600 INFO Processing user input
+2025-02-01T16:20:59.977993-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:20:59.978229-0600 INFO User Input:
+2025-02-01T16:21:02.167672-0600 INFO AI Response:
+2025-02-01T16:21:06.840290-0600 INFO answer
+2025-02-01T16:21:06.840596-0600 INFO Answering call or responding
+2025-02-01T16:21:06.840794-0600 INFO Conversation length is 3
+2025-02-01T16:21:06.840980-0600 INFO Patient: John
+2025-02-01T16:21:10.010976-0600 INFO Processing user input
+2025-02-01T16:21:10.012080-0600 WARNING Speech Result: I have, thanks.
+2025-02-01T16:21:10.012306-0600 INFO User Input:
+2025-02-01T16:21:11.988366-0600 INFO AI Response:
+2025-02-01T16:21:15.763620-0600 INFO answer
+2025-02-01T16:21:15.763946-0600 INFO Answering call or responding
+2025-02-01T16:21:15.764135-0600 INFO Conversation length is 5
+2025-02-01T16:21:15.764309-0600 INFO Patient: John
+2025-02-01T16:21:19.945092-0600 INFO Processing user input
+2025-02-01T16:21:19.946026-0600 WARNING Speech Result: Yes, I am. Thank you for asking.
+2025-02-01T16:21:19.946245-0600 INFO User Input:
+2025-02-01T16:21:22.209675-0600 INFO AI Response:
+2025-02-01T16:21:31.620179-0600 INFO answer
+2025-02-01T16:21:31.620486-0600 INFO Answering call or responding
+2025-02-01T16:21:31.620683-0600 INFO Conversation length is 7
+2025-02-01T16:21:31.620868-0600 INFO Patient: John
+2025-02-01T16:21:34.223549-0600 INFO Processing user input
+2025-02-01T16:21:34.224647-0600 WARNING Speech Result: Thank you. Bye.
+2025-02-01T16:21:34.224877-0600 INFO User Input:
+2025-02-01T16:21:34.618803-0600 INFO User requested to hang up
+2025-02-01T16:21:38.786124-0600 INFO Call ended
+2025-02-01T16:21:40.694173-0600 INFO Call summary: In the conversation, the medical assistant, checking in on John, an elderly patient, inquires about his health status and medication adherence. John confirms he has taken his medications and reports feeling healthy and well. The assistant reminds John to contact his doctor for any concerns and bids him farewell.
+2025-02-01T16:21:40.694454-0600 INFO Follow-up topics: ['routine check-up', 'medication schedule adherence', 'diet and nutrition', 'physical activity', 'any new health symptoms']
+2025-02-01T16:21:40.694606-0600 INFO Is emergency: False

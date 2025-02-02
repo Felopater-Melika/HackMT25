@@ -1,0 +1,12 @@
+2025-02-01 16:04:48.042 | INFO     | services.twiliogpt:make_call:40 - Placing call
+2025-02-01 16:04:56.884 | INFO     | services.twiliogpt:answer_call:63 - answer
+2025-02-01 16:04:56.884 | INFO     | services.twiliogpt:answer_call:69 - Answering call or responding
+2025-02-01 16:04:56.884 | INFO     | services.twiliogpt:answer_call:70 - Conversation length is 1
+2025-02-01 16:04:56.885 | INFO     | services.twiliogpt:answer_call:71 - Patient: John
+2025-02-01 16:05:05.212 | INFO     | services.twiliogpt:process_speech:92 - Processing user input
+2025-02-01 16:05:05.214 | WARNING  | services.twiliogpt:process_speech:99 - Speech Result: Everybody.
+2025-02-01 16:05:05.214 | INFO     | services.twiliogpt:process_speech:102 - User Input:
+2025-02-01 16:05:09.609 | INFO     | services.twiliogpt:call_ended:154 - Call ended
+2025-02-01 16:05:13.964 | INFO     | services.twiliogpt:call_ended:175 - Call summary: The medical assistant conducted a wellness check on Mr. John. They confirmed whether John was feeling well and reminded him about the importance of taking his medications regularly. John did not report any immediate health concerns or emergencies, and no urgent distress signals were noted during the conversation. The medical assistant offered gentle reminders on seeking immediate help for any serious health concerns.
+2025-02-01 16:05:13.964 | INFO     | services.twiliogpt:call_ended:176 - Follow-up topics: ['Medication adherence', 'Appointment scheduling', 'Nutritional guidelines', 'Physical activity recommendations', 'Fall prevention tips', 'Mental health check', 'Hearing and vision follow-up']
+2025-02-01 16:05:13.965 | INFO     | services.twiliogpt:call_ended:177 - Is emergency: False

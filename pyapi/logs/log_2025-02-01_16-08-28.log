@@ -1,0 +1,12 @@
+2025-02-01T16:08:40.549013-0600 INFO Placing call
+2025-02-01T16:08:48.823720-0600 INFO answer
+2025-02-01T16:08:48.824084-0600 INFO Answering call or responding
+2025-02-01T16:08:48.824311-0600 INFO Conversation length is 1
+2025-02-01T16:08:48.824514-0600 INFO Patient: John
+2025-02-01T16:08:57.114297-0600 INFO Processing user input
+2025-02-01T16:08:57.115573-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:08:57.115755-0600 INFO User Input:
+2025-02-01T16:09:01.312301-0600 INFO Call ended
+2025-02-01T16:09:02.956350-0600 INFO Call summary: The medical assistant checked in with John, an elderly patient, ensuring he feels well and has taken his medications. John responded to the greeting but didn’t provide any immediate feedback on his health status or medication adherence.
+2025-02-01T16:09:02.956756-0600 INFO Follow-up topics: ['Medication Adherence', 'Health Status Check', 'Diet and Nutrition', 'Exercise Routine', 'Mental Well-being', 'Ask about any concerns or questions']
+2025-02-01T16:09:02.956913-0600 INFO Is emergency: False

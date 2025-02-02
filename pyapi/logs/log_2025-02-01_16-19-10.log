@@ -1,0 +1,16 @@
+2025-02-01T16:19:14.908714-0600 INFO Placing call
+2025-02-01T16:19:20.597415-0600 INFO answer
+2025-02-01T16:19:20.597826-0600 INFO Answering call or responding
+2025-02-01T16:19:20.598043-0600 INFO Conversation length is 1
+2025-02-01T16:19:20.598234-0600 INFO Patient: John
+2025-02-01T16:19:27.696180-0600 INFO Processing user input
+2025-02-01T16:19:27.697554-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:19:28.793926-0600 INFO AI Response:
+2025-02-01T16:19:30.307516-0600 INFO answer
+2025-02-01T16:19:30.307846-0600 INFO Answering call or responding
+2025-02-01T16:19:30.308044-0600 INFO Conversation length is 2
+2025-02-01T16:19:30.308217-0600 INFO Patient: John
+2025-02-01T16:19:30.426393-0600 INFO Call ended
+2025-02-01T16:19:32.394800-0600 INFO Call summary: The medical assistant, during a routine check-in call, inquired about John's well-being and whether he had taken his medications for the day. They reminded John to contact his doctor or emergency services if he had any serious concerns.
+2025-02-01T16:19:32.395079-0600 INFO Follow-up topics: ['Medication adherence', 'General health updates', 'Appointment scheduling', 'Any new symptoms experienced', 'Fall prevention tips', 'Nutritional guidance']
+2025-02-01T16:19:32.395241-0600 INFO Is emergency: False

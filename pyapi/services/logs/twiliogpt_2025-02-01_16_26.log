@@ -1,0 +1,30 @@
+2025-02-01 16:26:49.809 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:26:55.385 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:26:55.385 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:26:55.386 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 1
+2025-02-01 16:26:55.386 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:27:02.273 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:27:02.275 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Hello blue, buddy.
+2025-02-01 16:27:02.275 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:27:04.298 | INFO     | services.twiliogpt:process_speech:158 - AI Response:
+2025-02-01 16:27:11.289 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:27:11.289 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:27:11.289 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 3
+2025-02-01 16:27:11.289 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:27:19.062 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:27:19.064 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: I am feeling well, I have taken all my medications including tomorrow's.
+2025-02-01 16:27:19.064 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:27:22.544 | INFO     | services.twiliogpt:process_speech:158 - AI Response:
+2025-02-01 16:27:34.221 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:27:34.221 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:27:34.221 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 5
+2025-02-01 16:27:34.221 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:27:38.018 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:27:38.019 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Thanks for the advice by.
+2025-02-01 16:27:38.019 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:27:42.566 | INFO     | services.twiliogpt:process_speech:141 - User requested to hang up
+2025-02-01 16:27:43.824 | INFO     | services.twiliogpt:process_speech:158 - AI Response:
+2025-02-01 16:27:44.767 | INFO     | services.twiliogpt:call_ended:179 - Call ended
+2025-02-01 16:27:47.290 | INFO     | services.twiliogpt:call_ended:200 - Call summary: The medical assistant checked in with John, an elderly patient, to inquire about his well-being and medication adherence. John reported feeling healthy and mentioned taking all his medications, including those for the next day. The assistant advised John to follow the prescribed medication schedule and encouraged him to contact his doctor with any concerns.
+2025-02-01 16:27:47.290 | INFO     | services.twiliogpt:call_ended:201 - Follow-up topics: ['Medication Adherence', 'Health Monitoring', 'Preventive Health Measures', 'Emergency Contact Procedures']
+2025-02-01 16:27:47.290 | INFO     | services.twiliogpt:call_ended:202 - Is emergency: False

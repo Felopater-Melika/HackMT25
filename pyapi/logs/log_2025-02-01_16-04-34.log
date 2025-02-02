@@ -1,0 +1,12 @@
+2025-02-01T16:04:48.042140-0600 INFO Placing call
+2025-02-01T16:04:56.884458-0600 INFO answer
+2025-02-01T16:04:56.884756-0600 INFO Answering call or responding
+2025-02-01T16:04:56.884930-0600 INFO Conversation length is 1
+2025-02-01T16:04:56.885093-0600 INFO Patient: John
+2025-02-01T16:05:05.212668-0600 INFO Processing user input
+2025-02-01T16:05:05.214249-0600 WARNING Speech Result: Everybody.
+2025-02-01T16:05:05.214485-0600 INFO User Input:
+2025-02-01T16:05:09.609243-0600 INFO Call ended
+2025-02-01T16:05:13.964486-0600 INFO Call summary: The medical assistant conducted a wellness check on Mr. John. They confirmed whether John was feeling well and reminded him about the importance of taking his medications regularly. John did not report any immediate health concerns or emergencies, and no urgent distress signals were noted during the conversation. The medical assistant offered gentle reminders on seeking immediate help for any serious health concerns.
+2025-02-01T16:05:13.964990-0600 INFO Follow-up topics: ['Medication adherence', 'Appointment scheduling', 'Nutritional guidelines', 'Physical activity recommendations', 'Fall prevention tips', 'Mental health check', 'Hearing and vision follow-up']
+2025-02-01T16:05:13.965167-0600 INFO Is emergency: False

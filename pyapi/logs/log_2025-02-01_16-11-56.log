@@ -1,0 +1,21 @@
+2025-02-01T16:11:59.284650-0600 INFO Placing call
+2025-02-01T16:12:04.714968-0600 INFO answer
+2025-02-01T16:12:04.715319-0600 INFO Answering call or responding
+2025-02-01T16:12:04.715540-0600 INFO Conversation length is 1
+2025-02-01T16:12:04.715734-0600 INFO Patient: John
+2025-02-01T16:12:12.575701-0600 INFO Processing user input
+2025-02-01T16:12:12.576808-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:12:12.576993-0600 INFO User Input:
+2025-02-01T16:12:15.775129-0600 INFO AI Response:
+2025-02-01T16:12:30.427052-0600 INFO answer
+2025-02-01T16:12:30.427330-0600 INFO Answering call or responding
+2025-02-01T16:12:30.427477-0600 INFO Conversation length is 3
+2025-02-01T16:12:30.427612-0600 INFO Patient: John
+2025-02-01T16:12:35.435242-0600 INFO Processing user input
+2025-02-01T16:12:35.436503-0600 WARNING Speech Result: Time, goodbye.
+2025-02-01T16:12:35.436730-0600 INFO User Input:
+2025-02-01T16:12:36.673489-0600 INFO User requested to hang up
+2025-02-01T16:12:40.872708-0600 INFO Call ended
+2025-02-01T16:12:42.648780-0600 INFO Call summary: The medical assistant initiated a brief check-in call with the elderly patient, John, to ensure his well-being and confirm if he's taken his medications. John didn't provide specific responses or details about his current health status and abruptly ended the call with 'Time, goodbye.' There are no indications of an emergency concern in this brief exchange.
+2025-02-01T16:12:42.649034-0600 INFO Follow-up topics: ['Check on medication adherence', 'Inquire about specific health concerns', 'Clarify communication preferences', 'Discuss daily routine', 'Ensure accessibility to emergency contacts']
+2025-02-01T16:12:42.649191-0600 INFO Is emergency: False

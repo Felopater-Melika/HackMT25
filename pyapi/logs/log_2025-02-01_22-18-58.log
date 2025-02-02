@@ -1,0 +1,71 @@
+2025-02-01T22:19:04.263087-0600 INFO Request received
+2025-02-01T22:19:04.263484-0600 INFO Placing call
+2025-02-01T22:19:11.452014-0600 INFO answer
+2025-02-01T22:19:11.452309-0600 INFO Answering call or responding
+2025-02-01T22:19:11.452468-0600 INFO Conversation length is 1
+2025-02-01T22:19:11.452616-0600 INFO Patient: John Doe
+2025-02-01T22:19:18.861492-0600 INFO Processing user input
+2025-02-01T22:19:18.862560-0600 WARNING Speech Result: Hello.
+2025-02-01T22:19:18.862744-0600 INFO User Input:
+2025-02-01T22:19:20.904359-0600 INFO GPT response took 2.0414278507232666 seconds
+2025-02-01T22:19:23.549662-0600 INFO AI Response:
+2025-02-01T22:19:27.691691-0600 INFO answer
+2025-02-01T22:19:27.692023-0600 INFO Answering call or responding
+2025-02-01T22:19:27.692220-0600 INFO Conversation length is 3
+2025-02-01T22:19:27.692396-0600 INFO Patient: John Doe
+2025-02-01T22:19:31.851614-0600 INFO Processing user input
+2025-02-01T22:19:31.852900-0600 WARNING Speech Result: Well, thank you.
+2025-02-01T22:19:31.853134-0600 INFO User Input:
+2025-02-01T22:19:32.455739-0600 INFO GPT response took 0.6023809909820557 seconds
+2025-02-01T22:19:33.187418-0600 INFO AI Response:
+2025-02-01T22:19:38.805519-0600 INFO answer
+2025-02-01T22:19:38.805796-0600 INFO Answering call or responding
+2025-02-01T22:19:38.805974-0600 INFO Conversation length is 5
+2025-02-01T22:19:38.806208-0600 INFO Patient: John Doe
+2025-02-01T22:19:48.620194-0600 INFO Processing user input
+2025-02-01T22:19:48.621120-0600 WARNING Speech Result: It was so great. He was amazing. I loved watching him play. He was amazing with a prodigy.
+2025-02-01T22:19:48.621305-0600 INFO User Input:
+2025-02-01T22:19:49.239456-0600 INFO GPT response took 0.6179900169372559 seconds
+2025-02-01T22:19:49.844942-0600 INFO AI Response:
+2025-02-01T22:20:00.123429-0600 INFO answer
+2025-02-01T22:20:00.123777-0600 INFO Answering call or responding
+2025-02-01T22:20:00.123973-0600 INFO Conversation length is 7
+2025-02-01T22:20:00.124156-0600 INFO Patient: John Doe
+2025-02-01T22:20:03.264227-0600 INFO Processing user input
+2025-02-01T22:20:03.265026-0600 WARNING Speech Result: It's been feeling much better.
+2025-02-01T22:20:03.265208-0600 INFO User Input:
+2025-02-01T22:20:04.488956-0600 INFO GPT response took 1.223581075668335 seconds
+2025-02-01T22:20:05.474254-0600 INFO AI Response:
+2025-02-01T22:20:13.339468-0600 INFO answer
+2025-02-01T22:20:13.339778-0600 INFO Answering call or responding
+2025-02-01T22:20:13.339977-0600 INFO Conversation length is 9
+2025-02-01T22:20:13.340162-0600 INFO Patient: John Doe
+2025-02-01T22:20:15.955406-0600 INFO Processing user input
+2025-02-01T22:20:15.956150-0600 WARNING Speech Result: Yes.
+2025-02-01T22:20:15.956323-0600 INFO User Input:
+2025-02-01T22:20:16.570309-0600 INFO GPT response took 0.6138248443603516 seconds
+2025-02-01T22:20:17.490931-0600 INFO AI Response:
+2025-02-01T22:20:23.225380-0600 INFO answer
+2025-02-01T22:20:23.225740-0600 INFO Answering call or responding
+2025-02-01T22:20:23.225926-0600 INFO Conversation length is 11
+2025-02-01T22:20:23.226096-0600 INFO Patient: John Doe
+2025-02-01T22:20:25.809226-0600 INFO Processing user input
+2025-02-01T22:20:25.809974-0600 WARNING Speech Result: I sure have.
+2025-02-01T22:20:25.810145-0600 INFO User Input:
+2025-02-01T22:20:26.504701-0600 INFO GPT response took 0.6943938732147217 seconds
+2025-02-01T22:20:27.384091-0600 INFO AI Response:
+2025-02-01T22:20:43.297131-0600 INFO answer
+2025-02-01T22:20:43.297642-0600 INFO Answering call or responding
+2025-02-01T22:20:43.297901-0600 INFO Conversation length is 13
+2025-02-01T22:20:43.298087-0600 INFO Patient: John Doe
+2025-02-01T22:20:47.085134-0600 INFO Processing user input
+2025-02-01T22:20:47.086036-0600 WARNING Speech Result: No.
+2025-02-01T22:20:47.086255-0600 INFO User Input:
+2025-02-01T22:20:47.986640-0600 INFO GPT response took 0.900184154510498 seconds
+2025-02-01T22:20:47.986890-0600 INFO User requested to hang up
+2025-02-01T22:20:48.749105-0600 INFO AI Response:
+2025-02-01T22:20:49.508884-0600 INFO Call ended
+2025-02-01T22:20:52.028348-0600 INFO Call summary: In a check-up call, the medical assistant engaged with John, an elderly patient, ensuring he was feeling well and had taken his medication, Aspirin, as prescribed. They discussed the recent piano concert of John's nephew, which John enjoyed thoroughly. John's back pain has improved, and he confirmed that he is managing his medication refills without any issues. No emergency concerns were raised during the conversation, and John did not have additional concerns to discuss.
+2025-02-01T22:20:52.028641-0600 INFO Follow-up topics: Nephew's concert, back pain monitoring, medication adherence
+2025-02-01T22:20:52.028802-0600 INFO Is emergency: False
+2025-02-01T22:20:52.028946-0600 INFO Medication updates: {'Aspirin': 'taken', '': ''}

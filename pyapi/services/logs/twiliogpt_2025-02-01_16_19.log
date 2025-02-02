@@ -1,0 +1,16 @@
+2025-02-01 16:19:14.908 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:19:20.597 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:19:20.597 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:19:20.598 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 1
+2025-02-01 16:19:20.598 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:19:27.696 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:19:27.697 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Hello blue, buddy.
+2025-02-01 16:19:28.793 | INFO     | services.twiliogpt:process_speech:151 - AI Response:
+2025-02-01 16:19:30.307 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:19:30.307 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:19:30.308 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 2
+2025-02-01 16:19:30.308 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:19:30.426 | INFO     | services.twiliogpt:call_ended:172 - Call ended
+2025-02-01 16:19:32.394 | INFO     | services.twiliogpt:call_ended:193 - Call summary: The medical assistant, during a routine check-in call, inquired about John's well-being and whether he had taken his medications for the day. They reminded John to contact his doctor or emergency services if he had any serious concerns.
+2025-02-01 16:19:32.395 | INFO     | services.twiliogpt:call_ended:194 - Follow-up topics: ['Medication adherence', 'General health updates', 'Appointment scheduling', 'Any new symptoms experienced', 'Fall prevention tips', 'Nutritional guidance']
+2025-02-01 16:19:32.395 | INFO     | services.twiliogpt:call_ended:195 - Is emergency: False

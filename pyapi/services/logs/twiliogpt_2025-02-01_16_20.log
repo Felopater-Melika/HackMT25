@@ -1,0 +1,37 @@
+2025-02-01 16:20:42.316 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:20:52.124 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:20:52.124 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:20:52.124 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 1
+2025-02-01 16:20:52.124 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:20:59.976 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:20:59.977 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Hello blue, buddy.
+2025-02-01 16:20:59.978 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:21:02.167 | INFO     | services.twiliogpt:process_speech:157 - AI Response:
+2025-02-01 16:21:06.840 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:21:06.840 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:21:06.840 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 3
+2025-02-01 16:21:06.840 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:21:10.010 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:21:10.012 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: I have, thanks.
+2025-02-01 16:21:10.012 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:21:11.988 | INFO     | services.twiliogpt:process_speech:157 - AI Response:
+2025-02-01 16:21:15.763 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:21:15.763 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:21:15.764 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 5
+2025-02-01 16:21:15.764 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:21:19.945 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:21:19.946 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Yes, I am. Thank you for asking.
+2025-02-01 16:21:19.946 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:21:22.209 | INFO     | services.twiliogpt:process_speech:157 - AI Response:
+2025-02-01 16:21:31.620 | INFO     | services.twiliogpt:answer_call:72 - answer
+2025-02-01 16:21:31.620 | INFO     | services.twiliogpt:answer_call:78 - Answering call or responding
+2025-02-01 16:21:31.620 | INFO     | services.twiliogpt:answer_call:79 - Conversation length is 7
+2025-02-01 16:21:31.620 | INFO     | services.twiliogpt:answer_call:80 - Patient: John
+2025-02-01 16:21:34.223 | INFO     | services.twiliogpt:process_speech:101 - Processing user input
+2025-02-01 16:21:34.224 | WARNING  | services.twiliogpt:process_speech:108 - Speech Result: Thank you. Bye.
+2025-02-01 16:21:34.224 | INFO     | services.twiliogpt:process_speech:111 - User Input:
+2025-02-01 16:21:34.618 | INFO     | services.twiliogpt:process_speech:142 - User requested to hang up
+2025-02-01 16:21:38.786 | INFO     | services.twiliogpt:call_ended:178 - Call ended
+2025-02-01 16:21:40.694 | INFO     | services.twiliogpt:call_ended:199 - Call summary: In the conversation, the medical assistant, checking in on John, an elderly patient, inquires about his health status and medication adherence. John confirms he has taken his medications and reports feeling healthy and well. The assistant reminds John to contact his doctor for any concerns and bids him farewell.
+2025-02-01 16:21:40.694 | INFO     | services.twiliogpt:call_ended:200 - Follow-up topics: ['routine check-up', 'medication schedule adherence', 'diet and nutrition', 'physical activity', 'any new health symptoms']
+2025-02-01 16:21:40.694 | INFO     | services.twiliogpt:call_ended:201 - Is emergency: False

@@ -1,0 +1,30 @@
+2025-02-01T16:26:49.809698-0600 INFO Placing call
+2025-02-01T16:26:55.385547-0600 INFO answer
+2025-02-01T16:26:55.385882-0600 INFO Answering call or responding
+2025-02-01T16:26:55.386176-0600 INFO Conversation length is 1
+2025-02-01T16:26:55.386373-0600 INFO Patient: John
+2025-02-01T16:27:02.273953-0600 INFO Processing user input
+2025-02-01T16:27:02.275537-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:27:02.275779-0600 INFO User Input:
+2025-02-01T16:27:04.298820-0600 INFO AI Response:
+2025-02-01T16:27:11.289445-0600 INFO answer
+2025-02-01T16:27:11.289706-0600 INFO Answering call or responding
+2025-02-01T16:27:11.289854-0600 INFO Conversation length is 3
+2025-02-01T16:27:11.289989-0600 INFO Patient: John
+2025-02-01T16:27:19.062752-0600 INFO Processing user input
+2025-02-01T16:27:19.064006-0600 WARNING Speech Result: I am feeling well, I have taken all my medications including tomorrow's.
+2025-02-01T16:27:19.064244-0600 INFO User Input:
+2025-02-01T16:27:22.544757-0600 INFO AI Response:
+2025-02-01T16:27:34.221248-0600 INFO answer
+2025-02-01T16:27:34.221558-0600 INFO Answering call or responding
+2025-02-01T16:27:34.221755-0600 INFO Conversation length is 5
+2025-02-01T16:27:34.221934-0600 INFO Patient: John
+2025-02-01T16:27:38.018530-0600 INFO Processing user input
+2025-02-01T16:27:38.019653-0600 WARNING Speech Result: Thanks for the advice by.
+2025-02-01T16:27:38.019879-0600 INFO User Input:
+2025-02-01T16:27:42.566161-0600 INFO User requested to hang up
+2025-02-01T16:27:43.824771-0600 INFO AI Response:
+2025-02-01T16:27:44.767403-0600 INFO Call ended
+2025-02-01T16:27:47.290402-0600 INFO Call summary: The medical assistant checked in with John, an elderly patient, to inquire about his well-being and medication adherence. John reported feeling healthy and mentioned taking all his medications, including those for the next day. The assistant advised John to follow the prescribed medication schedule and encouraged him to contact his doctor with any concerns.
+2025-02-01T16:27:47.290667-0600 INFO Follow-up topics: ['Medication Adherence', 'Health Monitoring', 'Preventive Health Measures', 'Emergency Contact Procedures']
+2025-02-01T16:27:47.290828-0600 INFO Is emergency: False

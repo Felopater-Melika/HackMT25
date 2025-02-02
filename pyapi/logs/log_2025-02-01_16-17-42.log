@@ -1,0 +1,17 @@
+2025-02-01T16:17:44.527484-0600 INFO Placing call
+2025-02-01T16:17:45.485770-0600 INFO Placing call
+2025-02-01T16:17:50.147537-0600 INFO answer
+2025-02-01T16:17:50.147877-0600 INFO Answering call or responding
+2025-02-01T16:17:50.148083-0600 INFO Conversation length is 2
+2025-02-01T16:17:50.148288-0600 INFO Patient: John
+2025-02-01T16:17:56.478492-0600 INFO Call ended
+2025-02-01T16:17:58.429690-0600 INFO Call summary: The medical assistant checked in on John, an elderly patient, to ensure he was feeling well and that he had taken his medications. The conversation was brief and focused on John's general health and medication adherence. John did not mention any serious concerns that require immediate emergency assistance.
+2025-02-01T16:17:58.430117-0600 INFO Follow-up topics: ['Medication adherence', 'Well-being check', 'Appointment reminders', 'Exercise and mobility', 'Diet and nutrition']
+2025-02-01T16:17:58.430284-0600 INFO Is emergency: False
+2025-02-01T16:18:00.880745-0600 INFO Call ended
+2025-02-01T16:18:05.478388-0600 INFO Placing call
+2025-02-01T16:18:11.936692-0600 INFO answer
+2025-02-01T16:18:11.936972-0600 INFO Answering call or responding
+2025-02-01T16:18:11.937130-0600 INFO Conversation length is 1
+2025-02-01T16:18:11.937275-0600 INFO Patient: John
+2025-02-01T16:18:22.211097-0600 INFO Call ended

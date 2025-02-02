@@ -1,0 +1,21 @@
+2025-02-01T16:14:52.222565-0600 INFO Placing call
+2025-02-01T16:14:58.323645-0600 INFO answer
+2025-02-01T16:14:58.323974-0600 INFO Answering call or responding
+2025-02-01T16:14:58.324146-0600 INFO Conversation length is 1
+2025-02-01T16:14:58.324301-0600 INFO Patient: John
+2025-02-01T16:15:07.088756-0600 INFO Processing user input
+2025-02-01T16:15:07.090052-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T16:15:07.090249-0600 INFO User Input:
+2025-02-01T16:15:09.183697-0600 INFO AI Response:
+2025-02-01T16:15:14.697434-0600 INFO answer
+2025-02-01T16:15:14.697765-0600 INFO Answering call or responding
+2025-02-01T16:15:14.697962-0600 INFO Conversation length is 3
+2025-02-01T16:15:14.698150-0600 INFO Patient: John
+2025-02-01T16:15:20.724289-0600 INFO Processing user input
+2025-02-01T16:15:20.725199-0600 WARNING Speech Result: I have taken my medication. Thank you.
+2025-02-01T16:15:20.725383-0600 INFO User Input:
+2025-02-01T16:15:21.258537-0600 INFO User requested to hang up
+2025-02-01T16:15:25.442213-0600 INFO Call ended
+2025-02-01T16:15:27.082025-0600 INFO Call summary: During the brief conversation, the medical assistant checked in with the elderly patient, John. They ensured John had taken his medication and inquired about his overall well-being. John confirmed he had taken his medication and did not express any immediate health concerns.
+2025-02-01T16:15:27.082293-0600 INFO Follow-up topics: ['Medication adherence', 'General health and well-being', 'Exercise and mobility', 'Diet and nutrition', 'Upcoming medical appointments']
+2025-02-01T16:15:27.082445-0600 INFO Is emergency: False

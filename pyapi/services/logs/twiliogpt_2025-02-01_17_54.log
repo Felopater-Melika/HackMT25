@@ -1,0 +1,87 @@
+2025-02-01 17:54:18.079 | INFO     | services.twiliogpt:make_call:53 - Placing call
+2025-02-01 17:54:25.789 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:54:25.789 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:54:25.789 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 1
+2025-02-01 17:54:25.789 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:54:36.847 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:54:36.848 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: This incredibly long.
+2025-02-01 17:54:36.849 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:54:39.511 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:54:46.143 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:54:46.143 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:54:46.143 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 3
+2025-02-01 17:54:46.144 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:54:49.477 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:54:49.478 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: Yeah.
+2025-02-01 17:54:49.478 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:54:55.407 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:55:01.362 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:55:01.362 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:55:01.362 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 5
+2025-02-01 17:55:01.363 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:55:05.513 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:55:05.514 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: No, I forgot.
+2025-02-01 17:55:05.514 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:55:07.439 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:55:16.786 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:55:16.787 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:55:16.787 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 7
+2025-02-01 17:55:16.787 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:55:20.370 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:55:20.371 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: I will I take a nap.
+2025-02-01 17:55:20.371 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:55:22.323 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:55:32.248 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:55:32.248 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:55:32.249 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 9
+2025-02-01 17:55:32.249 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:55:35.424 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:55:35.425 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: Yes, I've taken it.
+2025-02-01 17:55:35.426 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:55:36.463 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:55:42.795 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:55:42.795 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:55:42.796 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 11
+2025-02-01 17:55:42.796 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:55:45.051 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:55:45.052 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: I'm out.
+2025-02-01 17:55:45.052 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:55:46.371 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:55:56.517 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:55:56.518 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:55:56.518 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 13
+2025-02-01 17:55:56.518 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:55:59.675 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:55:59.676 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: Yes, I'm taking it tonight.
+2025-02-01 17:55:59.676 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:56:01.719 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:56:09.438 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:56:09.438 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:56:09.439 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 15
+2025-02-01 17:56:09.439 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:56:14.446 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:56:14.447 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: I have.
+2025-02-01 17:56:14.447 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:56:15.973 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:56:26.255 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:56:26.256 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:56:26.256 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 17
+2025-02-01 17:56:26.256 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:56:29.390 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:56:29.391 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: Thank you.
+2025-02-01 17:56:29.391 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:56:30.422 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:56:34.820 | INFO     | services.twiliogpt:answer_call:85 - answer
+2025-02-01 17:56:34.820 | INFO     | services.twiliogpt:answer_call:91 - Answering call or responding
+2025-02-01 17:56:34.821 | INFO     | services.twiliogpt:answer_call:92 - Conversation length is 19
+2025-02-01 17:56:34.821 | INFO     | services.twiliogpt:answer_call:93 - Patient: John
+2025-02-01 17:56:37.919 | INFO     | services.twiliogpt:process_speech:116 - Processing user input
+2025-02-01 17:56:37.920 | WARNING  | services.twiliogpt:process_speech:123 - Speech Result: I will.
+2025-02-01 17:56:37.921 | INFO     | services.twiliogpt:process_speech:126 - User Input:
+2025-02-01 17:56:38.422 | INFO     | services.twiliogpt:process_speech:165 - User requested to hang up
+2025-02-01 17:56:38.925 | INFO     | services.twiliogpt:process_speech:182 - AI Response:
+2025-02-01 17:56:39.852 | INFO     | services.twiliogpt:call_ended:203 - Call ended
+2025-02-01 17:56:44.046 | INFO     | services.twiliogpt:call_ended:224 - Call summary: During the check-in call, John, an elderly patient, acknowledged that he intended to take his medications, with some missteps due to forgetfulness and having missed doses. He confirmed the need for a refill for amlodipine but mentioned having successfully purchased more metformin. The assistant emphasized the importance of medication adherence and the necessity of reaching out to a healthcare provider in case of emergencies.
+2025-02-01 17:56:44.047 | INFO     | services.twiliogpt:call_ended:225 - Follow-up topics: medication adherence,refill reminders,medication schedule,any new or worsening symptoms
+2025-02-01 17:56:44.047 | INFO     | services.twiliogpt:call_ended:226 - Is emergency: False
+2025-02-01 17:56:44.047 | INFO     | services.twiliogpt:call_ended:227 - Medication updates: {'ibuprofen': 'taken', 'levothyroxine': 'not taking', 'amlodipine': 'need refill', 'metformin': 'need refill'}

@@ -1,0 +1,14 @@
+2025-02-01 16:10:52.847 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:10:58.043 | INFO     | services.twiliogpt:answer_call:71 - answer
+2025-02-01 16:10:58.044 | INFO     | services.twiliogpt:answer_call:77 - Answering call or responding
+2025-02-01 16:10:58.044 | INFO     | services.twiliogpt:answer_call:78 - Conversation length is 1
+2025-02-01 16:10:58.044 | INFO     | services.twiliogpt:answer_call:79 - Patient: John
+2025-02-01 16:11:05.579 | INFO     | services.twiliogpt:process_speech:100 - Processing user input
+2025-02-01 16:11:05.581 | WARNING  | services.twiliogpt:process_speech:107 - Speech Result: Buy blue, buddy.
+2025-02-01 16:11:05.581 | INFO     | services.twiliogpt:process_speech:110 - User Input:
+2025-02-01 16:11:10.300 | INFO     | services.twiliogpt:process_speech:141 - AI Response:
+2025-02-01 16:11:10.300 | INFO     | services.twiliogpt:process_speech:146 - OpenAI API Error:
+2025-02-01 16:11:14.495 | INFO     | services.twiliogpt:call_ended:162 - Call ended
+2025-02-01 16:11:17.547 | INFO     | services.twiliogpt:call_ended:183 - Call summary: The medical assistant, acting on behalf of the healthcare provider, checked in on the elderly patient named John. They asked about John's well-being and medication adherence, reminding him to contact a doctor or emergency services if there are any serious concerns.
+2025-02-01 16:11:17.547 | INFO     | services.twiliogpt:call_ended:184 - Follow-up topics: ['Medication Adherence', 'Physical Well-being Check', 'Appointment Reminders', 'Emergency Contact Plan', 'Dietary and Exercise Advice']
+2025-02-01 16:11:17.547 | INFO     | services.twiliogpt:call_ended:185 - Is emergency: False

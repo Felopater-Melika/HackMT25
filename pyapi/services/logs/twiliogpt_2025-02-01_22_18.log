@@ -1,0 +1,71 @@
+2025-02-01 22:19:04.263 | INFO     | services.twiliogpt:request:57 - Request received
+2025-02-01 22:19:04.263 | INFO     | services.twiliogpt:make_call:63 - Placing call
+2025-02-01 22:19:11.452 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:19:11.452 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:19:11.452 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 1
+2025-02-01 22:19:11.452 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:19:18.861 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:19:18.862 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: Hello.
+2025-02-01 22:19:18.862 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:19:20.904 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 2.0414278507232666 seconds
+2025-02-01 22:19:23.549 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:19:27.691 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:19:27.692 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:19:27.692 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 3
+2025-02-01 22:19:27.692 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:19:31.851 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:19:31.852 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: Well, thank you.
+2025-02-01 22:19:31.853 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:19:32.455 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 0.6023809909820557 seconds
+2025-02-01 22:19:33.187 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:19:38.805 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:19:38.805 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:19:38.805 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 5
+2025-02-01 22:19:38.806 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:19:48.620 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:19:48.621 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: It was so great. He was amazing. I loved watching him play. He was amazing with a prodigy.
+2025-02-01 22:19:48.621 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:19:49.239 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 0.6179900169372559 seconds
+2025-02-01 22:19:49.844 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:20:00.123 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:20:00.123 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:20:00.123 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 7
+2025-02-01 22:20:00.124 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:20:03.264 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:20:03.265 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: It's been feeling much better.
+2025-02-01 22:20:03.265 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:20:04.488 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 1.223581075668335 seconds
+2025-02-01 22:20:05.474 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:20:13.339 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:20:13.339 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:20:13.339 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 9
+2025-02-01 22:20:13.340 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:20:15.955 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:20:15.956 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: Yes.
+2025-02-01 22:20:15.956 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:20:16.570 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 0.6138248443603516 seconds
+2025-02-01 22:20:17.490 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:20:23.225 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:20:23.225 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:20:23.225 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 11
+2025-02-01 22:20:23.226 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:20:25.809 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:20:25.809 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: I sure have.
+2025-02-01 22:20:25.810 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:20:26.504 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 0.6943938732147217 seconds
+2025-02-01 22:20:27.384 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:20:43.297 | INFO     | services.twiliogpt:answer_call:96 - answer
+2025-02-01 22:20:43.297 | INFO     | services.twiliogpt:answer_call:102 - Answering call or responding
+2025-02-01 22:20:43.297 | INFO     | services.twiliogpt:answer_call:103 - Conversation length is 13
+2025-02-01 22:20:43.298 | INFO     | services.twiliogpt:answer_call:104 - Patient: John Doe
+2025-02-01 22:20:47.085 | INFO     | services.twiliogpt:process_speech:129 - Processing user input
+2025-02-01 22:20:47.086 | WARNING  | services.twiliogpt:process_speech:136 - Speech Result: No.
+2025-02-01 22:20:47.086 | INFO     | services.twiliogpt:process_speech:139 - User Input:
+2025-02-01 22:20:47.986 | INFO     | services.twiliogpt:process_speech:171 - GPT response took 0.900184154510498 seconds
+2025-02-01 22:20:47.986 | INFO     | services.twiliogpt:process_speech:178 - User requested to hang up
+2025-02-01 22:20:48.749 | INFO     | services.twiliogpt:process_speech:195 - AI Response:
+2025-02-01 22:20:49.508 | INFO     | services.twiliogpt:call_ended:216 - Call ended
+2025-02-01 22:20:52.028 | INFO     | services.twiliogpt:call_ended:237 - Call summary: In a check-up call, the medical assistant engaged with John, an elderly patient, ensuring he was feeling well and had taken his medication, Aspirin, as prescribed. They discussed the recent piano concert of John's nephew, which John enjoyed thoroughly. John's back pain has improved, and he confirmed that he is managing his medication refills without any issues. No emergency concerns were raised during the conversation, and John did not have additional concerns to discuss.
+2025-02-01 22:20:52.028 | INFO     | services.twiliogpt:call_ended:238 - Follow-up topics: Nephew's concert, back pain monitoring, medication adherence
+2025-02-01 22:20:52.028 | INFO     | services.twiliogpt:call_ended:239 - Is emergency: False
+2025-02-01 22:20:52.028 | INFO     | services.twiliogpt:call_ended:240 - Medication updates: {'Aspirin': 'taken', '': ''}

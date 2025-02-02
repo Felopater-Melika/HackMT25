@@ -1,0 +1,33 @@
+2025-02-01T15:33:55.802652-0600 INFO Placing call
+2025-02-01T15:34:03.039419-0600 INFO answer
+2025-02-01T15:34:03.039714-0600 INFO Answering call or responding
+2025-02-01T15:34:03.039896-0600 INFO Conversation length is 1
+2025-02-01T15:34:03.040057-0600 INFO Patient: John
+2025-02-01T15:34:11.950242-0600 INFO Processing user input
+2025-02-01T15:34:11.951615-0600 WARNING Speech Result: Hello blue, buddy.
+2025-02-01T15:34:11.951800-0600 INFO User Input:
+2025-02-01T15:34:13.079304-0600 INFO AI Response:
+2025-02-01T15:34:18.189378-0600 INFO answer
+2025-02-01T15:34:18.189629-0600 INFO Answering call or responding
+2025-02-01T15:34:18.189771-0600 INFO Conversation length is 3
+2025-02-01T15:34:18.189905-0600 INFO Patient: John
+2025-02-01T15:34:23.986813-0600 INFO Processing user input
+2025-02-01T15:34:23.987639-0600 WARNING Speech Result: Not today my chest really hurts and I don't feel well.
+2025-02-01T15:34:23.987775-0600 INFO User Input:
+2025-02-01T15:34:25.767159-0600 INFO AI Response:
+2025-02-01T15:34:39.299246-0600 INFO answer
+2025-02-01T15:34:39.299506-0600 INFO Answering call or responding
+2025-02-01T15:34:39.299743-0600 INFO Conversation length is 5
+2025-02-01T15:34:39.299876-0600 INFO Patient: John
+2025-02-01T15:34:45.531845-0600 INFO Processing user input
+2025-02-01T15:34:45.532865-0600 WARNING Speech Result: I have not been able to,
+2025-02-01T15:34:45.533045-0600 INFO User Input:
+2025-02-01T15:34:47.787418-0600 INFO AI Response:
+2025-02-01T15:34:56.128297-0600 INFO answer
+2025-02-01T15:34:56.128667-0600 INFO Answering call or responding
+2025-02-01T15:34:56.128892-0600 INFO Conversation length is 7
+2025-02-01T15:34:56.129078-0600 INFO Patient: John
+2025-02-01T15:34:56.229688-0600 INFO Call ended
+2025-02-01T15:34:59.890468-0600 INFO Call summary: The conversation involves a medical assistant, who is checking in on an elderly patient named John. During the call, John reports experiencing chest pain and admits that he has not taken his medication for the day. The medical assistant recognizes the seriousness of chest pain and promises to call emergency services immediately for John, advising him to sit down and stay calm until help arrives.
+2025-02-01T15:34:59.890719-0600 INFO Follow-up topics: ['Medication adherence', 'Chest pain follow-up', 'Emergency response outcome', 'General health check-up', "Doctor's appointment scheduling"]
+2025-02-01T15:34:59.890839-0600 INFO Is emergency: True

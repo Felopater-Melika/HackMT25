@@ -1,0 +1,12 @@
+2025-02-01 16:08:40.549 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:08:48.823 | INFO     | services.twiliogpt:answer_call:71 - answer
+2025-02-01 16:08:48.824 | INFO     | services.twiliogpt:answer_call:77 - Answering call or responding
+2025-02-01 16:08:48.824 | INFO     | services.twiliogpt:answer_call:78 - Conversation length is 1
+2025-02-01 16:08:48.824 | INFO     | services.twiliogpt:answer_call:79 - Patient: John
+2025-02-01 16:08:57.114 | INFO     | services.twiliogpt:process_speech:100 - Processing user input
+2025-02-01 16:08:57.115 | WARNING  | services.twiliogpt:process_speech:107 - Speech Result: Hello blue, buddy.
+2025-02-01 16:08:57.115 | INFO     | services.twiliogpt:process_speech:110 - User Input:
+2025-02-01 16:09:01.312 | INFO     | services.twiliogpt:call_ended:162 - Call ended
+2025-02-01 16:09:02.956 | INFO     | services.twiliogpt:call_ended:183 - Call summary: The medical assistant checked in with John, an elderly patient, ensuring he feels well and has taken his medications. John responded to the greeting but didn’t provide any immediate feedback on his health status or medication adherence.
+2025-02-01 16:09:02.956 | INFO     | services.twiliogpt:call_ended:184 - Follow-up topics: ['Medication Adherence', 'Health Status Check', 'Diet and Nutrition', 'Exercise Routine', 'Mental Well-being', 'Ask about any concerns or questions']
+2025-02-01 16:09:02.956 | INFO     | services.twiliogpt:call_ended:185 - Is emergency: False

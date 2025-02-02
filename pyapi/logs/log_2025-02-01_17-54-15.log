@@ -1,0 +1,87 @@
+2025-02-01T17:54:18.079828-0600 INFO Placing call
+2025-02-01T17:54:25.789088-0600 INFO answer
+2025-02-01T17:54:25.789369-0600 INFO Answering call or responding
+2025-02-01T17:54:25.789518-0600 INFO Conversation length is 1
+2025-02-01T17:54:25.789651-0600 INFO Patient: John
+2025-02-01T17:54:36.847622-0600 INFO Processing user input
+2025-02-01T17:54:36.848938-0600 WARNING Speech Result: This incredibly long.
+2025-02-01T17:54:36.849123-0600 INFO User Input:
+2025-02-01T17:54:39.511310-0600 INFO AI Response:
+2025-02-01T17:54:46.143407-0600 INFO answer
+2025-02-01T17:54:46.143752-0600 INFO Answering call or responding
+2025-02-01T17:54:46.143955-0600 INFO Conversation length is 3
+2025-02-01T17:54:46.144143-0600 INFO Patient: John
+2025-02-01T17:54:49.477420-0600 INFO Processing user input
+2025-02-01T17:54:49.478570-0600 WARNING Speech Result: Yeah.
+2025-02-01T17:54:49.478795-0600 INFO User Input:
+2025-02-01T17:54:55.407416-0600 INFO AI Response:
+2025-02-01T17:55:01.362107-0600 INFO answer
+2025-02-01T17:55:01.362508-0600 INFO Answering call or responding
+2025-02-01T17:55:01.362819-0600 INFO Conversation length is 5
+2025-02-01T17:55:01.363089-0600 INFO Patient: John
+2025-02-01T17:55:05.513338-0600 INFO Processing user input
+2025-02-01T17:55:05.514372-0600 WARNING Speech Result: No, I forgot.
+2025-02-01T17:55:05.514600-0600 INFO User Input:
+2025-02-01T17:55:07.439037-0600 INFO AI Response:
+2025-02-01T17:55:16.786657-0600 INFO answer
+2025-02-01T17:55:16.787037-0600 INFO Answering call or responding
+2025-02-01T17:55:16.787236-0600 INFO Conversation length is 7
+2025-02-01T17:55:16.787425-0600 INFO Patient: John
+2025-02-01T17:55:20.370465-0600 INFO Processing user input
+2025-02-01T17:55:20.371428-0600 WARNING Speech Result: I will I take a nap.
+2025-02-01T17:55:20.371666-0600 INFO User Input:
+2025-02-01T17:55:22.323415-0600 INFO AI Response:
+2025-02-01T17:55:32.248550-0600 INFO answer
+2025-02-01T17:55:32.248858-0600 INFO Answering call or responding
+2025-02-01T17:55:32.249055-0600 INFO Conversation length is 9
+2025-02-01T17:55:32.249247-0600 INFO Patient: John
+2025-02-01T17:55:35.424791-0600 INFO Processing user input
+2025-02-01T17:55:35.425881-0600 WARNING Speech Result: Yes, I've taken it.
+2025-02-01T17:55:35.426106-0600 INFO User Input:
+2025-02-01T17:55:36.463282-0600 INFO AI Response:
+2025-02-01T17:55:42.795679-0600 INFO answer
+2025-02-01T17:55:42.795991-0600 INFO Answering call or responding
+2025-02-01T17:55:42.796189-0600 INFO Conversation length is 11
+2025-02-01T17:55:42.796400-0600 INFO Patient: John
+2025-02-01T17:55:45.051142-0600 INFO Processing user input
+2025-02-01T17:55:45.052210-0600 WARNING Speech Result: I'm out.
+2025-02-01T17:55:45.052434-0600 INFO User Input:
+2025-02-01T17:55:46.371767-0600 INFO AI Response:
+2025-02-01T17:55:56.517871-0600 INFO answer
+2025-02-01T17:55:56.518341-0600 INFO Answering call or responding
+2025-02-01T17:55:56.518623-0600 INFO Conversation length is 13
+2025-02-01T17:55:56.518820-0600 INFO Patient: John
+2025-02-01T17:55:59.675794-0600 INFO Processing user input
+2025-02-01T17:55:59.676621-0600 WARNING Speech Result: Yes, I'm taking it tonight.
+2025-02-01T17:55:59.676801-0600 INFO User Input:
+2025-02-01T17:56:01.719080-0600 INFO AI Response:
+2025-02-01T17:56:09.438367-0600 INFO answer
+2025-02-01T17:56:09.438853-0600 INFO Answering call or responding
+2025-02-01T17:56:09.439052-0600 INFO Conversation length is 15
+2025-02-01T17:56:09.439238-0600 INFO Patient: John
+2025-02-01T17:56:14.446243-0600 INFO Processing user input
+2025-02-01T17:56:14.447248-0600 WARNING Speech Result: I have.
+2025-02-01T17:56:14.447447-0600 INFO User Input:
+2025-02-01T17:56:15.973175-0600 INFO AI Response:
+2025-02-01T17:56:26.255933-0600 INFO answer
+2025-02-01T17:56:26.256253-0600 INFO Answering call or responding
+2025-02-01T17:56:26.256449-0600 INFO Conversation length is 17
+2025-02-01T17:56:26.256628-0600 INFO Patient: John
+2025-02-01T17:56:29.390568-0600 INFO Processing user input
+2025-02-01T17:56:29.391277-0600 WARNING Speech Result: Thank you.
+2025-02-01T17:56:29.391458-0600 INFO User Input:
+2025-02-01T17:56:30.422199-0600 INFO AI Response:
+2025-02-01T17:56:34.820604-0600 INFO answer
+2025-02-01T17:56:34.820905-0600 INFO Answering call or responding
+2025-02-01T17:56:34.821086-0600 INFO Conversation length is 19
+2025-02-01T17:56:34.821259-0600 INFO Patient: John
+2025-02-01T17:56:37.919865-0600 INFO Processing user input
+2025-02-01T17:56:37.920921-0600 WARNING Speech Result: I will.
+2025-02-01T17:56:37.921138-0600 INFO User Input:
+2025-02-01T17:56:38.422876-0600 INFO User requested to hang up
+2025-02-01T17:56:38.925498-0600 INFO AI Response:
+2025-02-01T17:56:39.852380-0600 INFO Call ended
+2025-02-01T17:56:44.046944-0600 INFO Call summary: During the check-in call, John, an elderly patient, acknowledged that he intended to take his medications, with some missteps due to forgetfulness and having missed doses. He confirmed the need for a refill for amlodipine but mentioned having successfully purchased more metformin. The assistant emphasized the importance of medication adherence and the necessity of reaching out to a healthcare provider in case of emergencies.
+2025-02-01T17:56:44.047233-0600 INFO Follow-up topics: medication adherence,refill reminders,medication schedule,any new or worsening symptoms
+2025-02-01T17:56:44.047417-0600 INFO Is emergency: False
+2025-02-01T17:56:44.047544-0600 INFO Medication updates: {'ibuprofen': 'taken', 'levothyroxine': 'not taking', 'amlodipine': 'need refill', 'metformin': 'need refill'}

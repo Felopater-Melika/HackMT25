@@ -1,0 +1,33 @@
+2025-02-01T15:54:32.237072-0600 INFO Placing call
+2025-02-01T15:54:40.244507-0600 INFO answer
+2025-02-01T15:54:40.244834-0600 INFO Answering call or responding
+2025-02-01T15:54:40.245016-0600 INFO Conversation length is 1
+2025-02-01T15:54:40.245179-0600 INFO Patient: John
+2025-02-01T15:54:50.484815-0600 INFO Processing user input
+2025-02-01T15:54:50.486215-0600 WARNING Speech Result: Hello, blue, buddy. What's hip-hop 11 in?
+2025-02-01T15:54:50.486475-0600 INFO User Input:
+2025-02-01T15:54:55.325018-0600 INFO AI Response:
+2025-02-01T15:55:09.213223-0600 INFO answer
+2025-02-01T15:55:09.213541-0600 INFO Answering call or responding
+2025-02-01T15:55:09.213734-0600 INFO Conversation length is 3
+2025-02-01T15:55:09.213913-0600 INFO Patient: John
+2025-02-01T15:55:22.710420-0600 INFO Processing user input
+2025-02-01T15:55:22.711549-0600 WARNING Speech Result: I'm doing fine. I figured all my medication. I can't wait to see my grandson Jimmy and his piano concert tomorrow. I love that little boy.
+2025-02-01T15:55:22.711775-0600 INFO User Input:
+2025-02-01T15:55:23.864624-0600 INFO AI Response:
+2025-02-01T15:55:43.208697-0600 INFO answer
+2025-02-01T15:55:43.209013-0600 INFO Answering call or responding
+2025-02-01T15:55:43.209201-0600 INFO Conversation length is 5
+2025-02-01T15:55:43.209386-0600 INFO Patient: John
+2025-02-01T15:55:47.918130-0600 INFO Processing user input
+2025-02-01T15:55:47.919053-0600 WARNING Speech Result: Thank you. Bye.
+2025-02-01T15:55:47.919269-0600 INFO User Input:
+2025-02-01T15:55:48.678988-0600 INFO AI Response:
+2025-02-01T15:55:51.604750-0600 INFO answer
+2025-02-01T15:55:51.605046-0600 INFO Answering call or responding
+2025-02-01T15:55:51.605231-0600 INFO Conversation length is 7
+2025-02-01T15:55:51.605401-0600 INFO Patient: John
+2025-02-01T15:55:51.725794-0600 INFO Call ended
+2025-02-01T15:55:53.727600-0600 INFO Call summary: The medical assistant called an elderly patient, John, to check on his health and medication adherence. John mentioned feeling fine and had taken all his medications. He expressed excitement about attending his grandson Jimmy's piano concert the next day. The assistant reminded John to contact his doctor or call 911 in case of any emergencies.
+2025-02-01T15:55:53.727879-0600 INFO Follow-up topics: ['Medication adherence', 'Upcoming family events', 'Health concerns or changes', 'Social interactions and support']
+2025-02-01T15:55:53.728033-0600 INFO Is emergency: False

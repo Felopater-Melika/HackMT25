@@ -1,0 +1,65 @@
+2025-02-01T14:36:16.706554-0600 INFO Placing call
+2025-02-01T14:36:43.554824-0600 INFO Call ended
+2025-02-01T14:36:51.367980-0600 INFO Placing call
+2025-02-01T14:36:58.354324-0600 INFO answer
+2025-02-01T14:36:58.355033-0600 INFO Answering call or responding
+2025-02-01T14:36:58.355230-0600 INFO Conversation length is 1
+2025-02-01T14:36:58.355376-0600 INFO Patient: John
+2025-02-01T14:37:10.845548-0600 INFO Processing user input
+2025-02-01T14:37:10.846853-0600 WARNING Speech Result: I,
+2025-02-01T14:37:10.847025-0600 INFO User Input:
+2025-02-01T14:37:13.399642-0600 INFO AI Response:
+2025-02-01T14:37:21.803181-0600 INFO answer
+2025-02-01T14:37:21.803431-0600 INFO Answering call or responding
+2025-02-01T14:37:21.803578-0600 INFO Conversation length is 3
+2025-02-01T14:37:21.803711-0600 INFO Patient: John
+2025-02-01T14:37:27.253653-0600 INFO Processing user input
+2025-02-01T14:37:27.254697-0600 WARNING Speech Result: Feel bad and I have not taken any medication.
+2025-02-01T14:37:27.254873-0600 INFO User Input:
+2025-02-01T14:37:29.172561-0600 INFO AI Response:
+2025-02-01T14:37:42.395574-0600 INFO answer
+2025-02-01T14:37:42.395821-0600 INFO Answering call or responding
+2025-02-01T14:37:42.395932-0600 INFO Conversation length is 5
+2025-02-01T14:37:42.396029-0600 INFO Patient: John
+2025-02-01T14:37:47.446009-0600 INFO Processing user input
+2025-02-01T14:37:47.447044-0600 WARNING Speech Result: Yeah, that's yes. Help me take my medication.
+2025-02-01T14:37:47.447279-0600 INFO User Input:
+2025-02-01T14:37:49.140422-0600 INFO AI Response:
+2025-02-01T14:38:03.171829-0600 INFO answer
+2025-02-01T14:38:03.172086-0600 INFO Answering call or responding
+2025-02-01T14:38:03.172231-0600 INFO Conversation length is 7
+2025-02-01T14:38:03.172359-0600 INFO Patient: John
+2025-02-01T14:38:05.793913-0600 INFO Processing user input
+2025-02-01T14:38:05.794599-0600 WARNING Speech Result: I can't read.
+2025-02-01T14:38:05.794729-0600 INFO User Input:
+2025-02-01T14:38:07.777873-0600 INFO AI Response:
+2025-02-01T14:38:23.161739-0600 INFO answer
+2025-02-01T14:38:23.161978-0600 INFO Answering call or responding
+2025-02-01T14:38:23.162122-0600 INFO Conversation length is 9
+2025-02-01T14:38:23.162248-0600 INFO Patient: John
+2025-02-01T14:38:30.102747-0600 INFO Processing user input
+2025-02-01T14:38:30.103418-0600 WARNING Speech Result: Hang up.
+2025-02-01T14:38:30.103547-0600 INFO User Input:
+2025-02-01T14:38:31.536787-0600 INFO AI Response:
+2025-02-01T14:38:37.436684-0600 INFO answer
+2025-02-01T14:38:37.437043-0600 INFO Answering call or responding
+2025-02-01T14:38:37.437275-0600 INFO Conversation length is 11
+2025-02-01T14:38:37.437429-0600 INFO Patient: John
+2025-02-01T14:38:42.185084-0600 INFO Processing user input
+2025-02-01T14:38:42.186074-0600 WARNING Speech Result: Thank you.
+2025-02-01T14:38:42.186238-0600 INFO User Input:
+2025-02-01T14:38:43.640831-0600 INFO AI Response:
+2025-02-01T14:38:47.933321-0600 INFO answer
+2025-02-01T14:38:47.933561-0600 INFO Answering call or responding
+2025-02-01T14:38:47.933707-0600 INFO Conversation length is 13
+2025-02-01T14:38:47.933835-0600 INFO Patient: John
+2025-02-01T14:38:50.881033-0600 INFO Processing user input
+2025-02-01T14:38:50.881971-0600 WARNING Speech Result: Hangouts.
+2025-02-01T14:38:50.882141-0600 INFO User Input:
+2025-02-01T14:38:51.556613-0600 INFO AI Response:
+2025-02-01T14:38:59.999948-0600 INFO answer
+2025-02-01T14:39:00.000208-0600 INFO Answering call or responding
+2025-02-01T14:39:00.000364-0600 INFO Conversation length is 15
+2025-02-01T14:39:00.000473-0600 INFO Patient: John
+2025-02-01T14:39:00.188827-0600 INFO Call ended
+2025-02-01T14:39:02.157921-0600 INFO Call summary: Sure! In the conversation, I checked in on John to see how he was feeling and whether he had taken his medications. John mentioned he was feeling unwell and had not taken his medication yet. I offered to help him with taking his medication, and when John mentioned he couldn't read the labels, I suggested finding someone nearby to assist or identifying the medication by touch or color. Finally, John indicated he wanted to end the conversation, and we concluded with a friendly goodbye.

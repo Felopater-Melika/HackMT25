@@ -1,0 +1,33 @@
+2025-02-01 15:54:32.237 | INFO     | services.twiliogpt:make_call:40 - Placing call
+2025-02-01 15:54:40.244 | INFO     | services.twiliogpt:answer_call:63 - answer
+2025-02-01 15:54:40.244 | INFO     | services.twiliogpt:answer_call:69 - Answering call or responding
+2025-02-01 15:54:40.245 | INFO     | services.twiliogpt:answer_call:70 - Conversation length is 1
+2025-02-01 15:54:40.245 | INFO     | services.twiliogpt:answer_call:71 - Patient: John
+2025-02-01 15:54:50.484 | INFO     | services.twiliogpt:process_speech:89 - Processing user input
+2025-02-01 15:54:50.486 | WARNING  | services.twiliogpt:process_speech:96 - Speech Result: Hello, blue, buddy. What's hip-hop 11 in?
+2025-02-01 15:54:50.486 | INFO     | services.twiliogpt:process_speech:105 - User Input:
+2025-02-01 15:54:55.325 | INFO     | services.twiliogpt:process_speech:119 - AI Response:
+2025-02-01 15:55:09.213 | INFO     | services.twiliogpt:answer_call:63 - answer
+2025-02-01 15:55:09.213 | INFO     | services.twiliogpt:answer_call:69 - Answering call or responding
+2025-02-01 15:55:09.213 | INFO     | services.twiliogpt:answer_call:70 - Conversation length is 3
+2025-02-01 15:55:09.213 | INFO     | services.twiliogpt:answer_call:71 - Patient: John
+2025-02-01 15:55:22.710 | INFO     | services.twiliogpt:process_speech:89 - Processing user input
+2025-02-01 15:55:22.711 | WARNING  | services.twiliogpt:process_speech:96 - Speech Result: I'm doing fine. I figured all my medication. I can't wait to see my grandson Jimmy and his piano concert tomorrow. I love that little boy.
+2025-02-01 15:55:22.711 | INFO     | services.twiliogpt:process_speech:105 - User Input:
+2025-02-01 15:55:23.864 | INFO     | services.twiliogpt:process_speech:119 - AI Response:
+2025-02-01 15:55:43.208 | INFO     | services.twiliogpt:answer_call:63 - answer
+2025-02-01 15:55:43.209 | INFO     | services.twiliogpt:answer_call:69 - Answering call or responding
+2025-02-01 15:55:43.209 | INFO     | services.twiliogpt:answer_call:70 - Conversation length is 5
+2025-02-01 15:55:43.209 | INFO     | services.twiliogpt:answer_call:71 - Patient: John
+2025-02-01 15:55:47.918 | INFO     | services.twiliogpt:process_speech:89 - Processing user input
+2025-02-01 15:55:47.919 | WARNING  | services.twiliogpt:process_speech:96 - Speech Result: Thank you. Bye.
+2025-02-01 15:55:47.919 | INFO     | services.twiliogpt:process_speech:105 - User Input:
+2025-02-01 15:55:48.678 | INFO     | services.twiliogpt:process_speech:119 - AI Response:
+2025-02-01 15:55:51.604 | INFO     | services.twiliogpt:answer_call:63 - answer
+2025-02-01 15:55:51.605 | INFO     | services.twiliogpt:answer_call:69 - Answering call or responding
+2025-02-01 15:55:51.605 | INFO     | services.twiliogpt:answer_call:70 - Conversation length is 7
+2025-02-01 15:55:51.605 | INFO     | services.twiliogpt:answer_call:71 - Patient: John
+2025-02-01 15:55:51.725 | INFO     | services.twiliogpt:call_ended:140 - Call ended
+2025-02-01 15:55:53.727 | INFO     | services.twiliogpt:call_ended:161 - Call summary: The medical assistant called an elderly patient, John, to check on his health and medication adherence. John mentioned feeling fine and had taken all his medications. He expressed excitement about attending his grandson Jimmy's piano concert the next day. The assistant reminded John to contact his doctor or call 911 in case of any emergencies.
+2025-02-01 15:55:53.727 | INFO     | services.twiliogpt:call_ended:162 - Follow-up topics: ['Medication adherence', 'Upcoming family events', 'Health concerns or changes', 'Social interactions and support']
+2025-02-01 15:55:53.728 | INFO     | services.twiliogpt:call_ended:163 - Is emergency: False

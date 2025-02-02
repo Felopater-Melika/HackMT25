@@ -1,0 +1,45 @@
+2025-02-01T15:31:14.137821-0600 INFO Placing call
+2025-02-01T15:31:20.548928-0600 INFO answer
+2025-02-01T15:31:20.549243-0600 INFO Answering call or responding
+2025-02-01T15:31:20.549413-0600 INFO Conversation length is 1
+2025-02-01T15:31:20.549566-0600 INFO Patient: John
+2025-02-01T15:31:30.935418-0600 INFO Call ended
+2025-02-01T15:31:39.512142-0600 INFO Placing call
+2025-02-01T15:31:47.977126-0600 INFO answer
+2025-02-01T15:31:47.977519-0600 INFO Answering call or responding
+2025-02-01T15:31:47.977747-0600 INFO Conversation length is 1
+2025-02-01T15:31:47.977954-0600 INFO Patient: John
+2025-02-01T15:31:56.223156-0600 INFO Processing user input
+2025-02-01T15:31:56.224629-0600 WARNING Speech Result: Hello.
+2025-02-01T15:31:56.224801-0600 INFO User Input:
+2025-02-01T15:31:57.972363-0600 INFO AI Response:
+2025-02-01T15:32:05.687820-0600 INFO answer
+2025-02-01T15:32:05.688082-0600 INFO Answering call or responding
+2025-02-01T15:32:05.688227-0600 INFO Conversation length is 3
+2025-02-01T15:32:05.688351-0600 INFO Patient: John
+2025-02-01T15:32:13.601771-0600 INFO Processing user input
+2025-02-01T15:32:13.602919-0600 WARNING Speech Result: Not today, my heart really hurts. I feel like I'm going to pass out.
+2025-02-01T15:32:13.603092-0600 INFO User Input:
+2025-02-01T15:32:15.106443-0600 INFO AI Response:
+2025-02-01T15:32:34.621283-0600 INFO answer
+2025-02-01T15:32:34.621665-0600 INFO Answering call or responding
+2025-02-01T15:32:34.621889-0600 INFO Conversation length is 5
+2025-02-01T15:32:34.622084-0600 INFO Patient: John
+2025-02-01T15:32:38.047185-0600 INFO Processing user input
+2025-02-01T15:32:38.048051-0600 WARNING Speech Result: I don't feel well.
+2025-02-01T15:32:38.048220-0600 INFO User Input:
+2025-02-01T15:32:40.193058-0600 INFO AI Response:
+2025-02-01T15:32:54.346577-0600 INFO answer
+2025-02-01T15:32:54.346958-0600 INFO Answering call or responding
+2025-02-01T15:32:54.347199-0600 INFO Conversation length is 7
+2025-02-01T15:32:54.347405-0600 INFO Patient: John
+2025-02-01T15:32:58.083670-0600 INFO Processing user input
+2025-02-01T15:32:58.084711-0600 WARNING Speech Result: Okay, thanks.
+2025-02-01T15:32:58.084883-0600 INFO User Input:
+2025-02-01T15:32:58.673094-0600 INFO AI Response:
+2025-02-01T15:32:59.704443-0600 INFO answer
+2025-02-01T15:32:59.704649-0600 INFO Answering call or responding
+2025-02-01T15:32:59.704806-0600 INFO Conversation length is 9
+2025-02-01T15:32:59.704946-0600 INFO Patient: John
+2025-02-01T15:32:59.801461-0600 INFO Call ended
+2025-02-01T15:33:05.848858-0600 INFO Call summary: The medical assistant conducts a wellness check call with an elderly patient, John. During the conversation, John reports severe heart pain and dizziness, indicating a possible emergency. The medical assistant advises John to lie down and call emergency services immediately.

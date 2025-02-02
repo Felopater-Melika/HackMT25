@@ -1,0 +1,21 @@
+2025-02-01 16:11:59.284 | INFO     | services.twiliogpt:make_call:42 - Placing call
+2025-02-01 16:12:04.714 | INFO     | services.twiliogpt:answer_call:71 - answer
+2025-02-01 16:12:04.715 | INFO     | services.twiliogpt:answer_call:77 - Answering call or responding
+2025-02-01 16:12:04.715 | INFO     | services.twiliogpt:answer_call:78 - Conversation length is 1
+2025-02-01 16:12:04.715 | INFO     | services.twiliogpt:answer_call:79 - Patient: John
+2025-02-01 16:12:12.575 | INFO     | services.twiliogpt:process_speech:100 - Processing user input
+2025-02-01 16:12:12.576 | WARNING  | services.twiliogpt:process_speech:107 - Speech Result: Hello blue, buddy.
+2025-02-01 16:12:12.576 | INFO     | services.twiliogpt:process_speech:110 - User Input:
+2025-02-01 16:12:15.775 | INFO     | services.twiliogpt:process_speech:141 - AI Response:
+2025-02-01 16:12:30.427 | INFO     | services.twiliogpt:answer_call:71 - answer
+2025-02-01 16:12:30.427 | INFO     | services.twiliogpt:answer_call:77 - Answering call or responding
+2025-02-01 16:12:30.427 | INFO     | services.twiliogpt:answer_call:78 - Conversation length is 3
+2025-02-01 16:12:30.427 | INFO     | services.twiliogpt:answer_call:79 - Patient: John
+2025-02-01 16:12:35.435 | INFO     | services.twiliogpt:process_speech:100 - Processing user input
+2025-02-01 16:12:35.436 | WARNING  | services.twiliogpt:process_speech:107 - Speech Result: Time, goodbye.
+2025-02-01 16:12:35.436 | INFO     | services.twiliogpt:process_speech:110 - User Input:
+2025-02-01 16:12:36.673 | INFO     | services.twiliogpt:process_speech:126 - User requested to hang up
+2025-02-01 16:12:40.872 | INFO     | services.twiliogpt:call_ended:162 - Call ended
+2025-02-01 16:12:42.648 | INFO     | services.twiliogpt:call_ended:183 - Call summary: The medical assistant initiated a brief check-in call with the elderly patient, John, to ensure his well-being and confirm if he's taken his medications. John didn't provide specific responses or details about his current health status and abruptly ended the call with 'Time, goodbye.' There are no indications of an emergency concern in this brief exchange.
+2025-02-01 16:12:42.649 | INFO     | services.twiliogpt:call_ended:184 - Follow-up topics: ['Check on medication adherence', 'Inquire about specific health concerns', 'Clarify communication preferences', 'Discuss daily routine', 'Ensure accessibility to emergency contacts']
+2025-02-01 16:12:42.649 | INFO     | services.twiliogpt:call_ended:185 - Is emergency: False
